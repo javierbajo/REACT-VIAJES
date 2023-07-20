@@ -1,0 +1,49 @@
+.fruitCard{
+    padding-inline-start: 0;
+    display: flex;
+    padding: 40px 0 40px 0;
+    margin: 20px;
+    align-items: center;
+
+    /* grid-gap: 40px; */
+    background-color: #aaa;
+}
+
+.fruitCard-name{
+    margin: 0;
+    line-height: 3;
+    font-family: 'Lato', sans-serif;
+    -webkit-text-stroke: 2px #444;
+    text-align: center;
+    font-size: 50px;
+    color: #ffcc01;
+}
+
+.fruitCard-image{
+    height: 300px;
+    transition: all 0.8s; 
+    margin:10px;
+  
+}
+
+.fruitCard-imageContainer{
+    justify-content: center;
+    width: 50%;
+}
+.fruitCard-info{
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+}
+/*
+.fruitCard-p1{
+
+}
+
+.fruitCard-p2{
+    
+}
+
+.fruitCard-p3{
+    
+} */
