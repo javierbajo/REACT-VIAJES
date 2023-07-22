@@ -1,14 +1,14 @@
 import {useEffect, useState} from 'react';
 import '../../styles/Frutas.css';
-import ListFrutas from './ListFrutas';
+import ListDestinos from './ListDestinos';
 
-const Frutas = () => {
-  const [fruits, setFruits] = useState([]);
+const Destinos = () => {
+  const [destinations, setDestinations] = useState([]);
 
   const getDataAPI = async ()=>{
       const response = await fetch('https://api-frutas.vercel.app/fruits');
       const res = await response.json();
-      setFruits(res);
+      setDestinations(res);
   }
   useEffect(() => {
 
@@ -26,9 +26,9 @@ const Frutas = () => {
 
   return (
     <div className='frutas-div'>
-      <ListFrutas fruits = {fruits} />
+      <ListDestinos destinations = {destinations} />
     </div>
   )
 }
 
-export default Frutas
+export default Destinos
