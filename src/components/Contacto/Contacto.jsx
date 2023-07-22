@@ -1,18 +1,32 @@
-import React from 'react'
-import '../../styles/Contacto.css'
+import React, { useRef} from 'react';
+import '../../styles/Contacto.css';
+import emailjs from '@emailjs/browser';
+
 
 const Contacto = () => {
-  return (
-    <form className='contacto-form'>
-      <label htmlFor="">Nombre</label>
-      <input type="text" /> <br />
+  const form = useRef();
 
-      <label htmlFor="">Comentario</label>
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-      
-      
-      </form>
-  )
-}
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-export default Contacto
+    emailjs.sendForm('service_2zfnijr', 'template_1qyko6a', form.current, 'WD4OVH6ubbz0jxDRK')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+  return ( 
+  <form ref={form} onSubmit={sendEmail} className='field'>
+    <label>Name</label>
+    <input type="text" name="user_name" />
+    <label>Email</label>
+    <input type="email" name="user_email" />
+    <label>Message</label>
+    <textarea name="message" />
+    <input type="submit" value="Send" />
+  </form>
+  );
+};
+
+export default Contacto;
