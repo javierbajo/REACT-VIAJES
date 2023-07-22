@@ -1,0 +1,132 @@
+//Variables here
+$letter-color: white;
+$gradient-1: #ea8d8d;
+$gradient-2: #a890fe;
+//Css here
+
+//Div dropdown
+.dropdown {
+    width: 15%;
+    height: 50%;
+    padding-right: 1%;
+    padding-left: 1%;
+    position: relative;
+    background: #635e5e;
+    border-radius: 10px;
+    align-self: center;
+    margin-right: 3%;
+    //Button css
+
+    &>button.dropdown_button {
+        background: inherit;
+        border: 0;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+
+        &>div.content {
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            color: #b3adad;
+            position: relative;
+            z-index: 2;
+            transition: 0.3s;
+
+            & p {
+                font-size: 1.4em;
+                align-self: center;
+            }
+
+            & .user_circle {
+                width: 60px;
+                height: 40px;
+                align-self: center;
+            }
+
+            & .arrow_down {
+                width: 50%;
+                height: 30%;
+                align-self: center;
+                margin-top: 3%;
+                margin-left: 20%;
+                transition: 0.3s;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                background: rgba(255, 255, 255, 0.986);
+                transform: scaleX(0);
+                width: 120%;
+                left: 0;
+                translate: -10% 0;
+                height: 2px;
+                bottom: -40%;
+                transition: 0.3s;
+            }
+
+
+        }
+
+    }
+
+    &:hover>.dropdown_button>.content::after {
+        transform: scaleX(1);
+    }
+
+    &:hover>.dropdown_button>.content {
+        color: #fff;
+    }
+
+    &:hover>.dropdown_button>.content>.arrow_down {
+        rotate: -180deg;
+    }
+
+    &:hover .menu {
+        visibility: visible;
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.menu {
+    position: absolute;
+    z-index: 1;
+    width: 110%;
+    border: 3px solid black;
+    top: -8px;
+    left: 50%;
+    padding: 70px 0 6px;
+    border-radius: 6px;
+    translate: -50%;
+    scale: 0.85;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 1px 1px 3px rgb(0 0 0);
+    background: linear-gradient($gradient-1, $gradient-2);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 1 0px;
+    font-size: 1.2em;
+    text-shadow: 1px 1px #000000;
+
+    &>a {
+        display: flex;
+        align-items: center;
+        padding: 10% 24px;
+        color: #f7f7f7;
+        text-decoration: none;
+
+        &>li {
+            display: flex;
+            gap: 10px;
+        }
+
+        &:hover {
+            background: rgb(0 0 0 / 10%);
+        }
+    }
+}
+

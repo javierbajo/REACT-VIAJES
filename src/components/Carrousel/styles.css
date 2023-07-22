@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 200vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+article.character_card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid white;
+}
+
+.character_card img {
+  width: 30%;
+  height: 50%;
+}
+
+div.carrousel {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.section_carrousel {
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
+}
+
+div.encima{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    border: 3px solid black;
+}

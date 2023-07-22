@@ -14,7 +14,8 @@ import AuthRoute from "./components/AuthRoute/AuthRoute";
 import Profile from "./components/Profile/Profile";
 import Logout from "./components/Logout";
 import LoginNote from "./components/LoginNote";
-
+import Carrousel from "./components/Carrousel/Carrousel";
+import UserMenu from './components/Dropdown/UserMenu';
 function App() {
   const navigate = useNavigate();
   // traigo los datos de los usuarios de la DB--------------
@@ -55,48 +56,48 @@ function App() {
   return (
     <>
       <div className="App">
-        <div className="contenedor-principal">
-          <header>
-            <div>
-              <h1> JAVIWEB DE LA FRUTA </h1>
-            </div>
-            <NavBar user={user} setUser={setUser} />
-          </header>
+        <header className="div_header">
+          <div className="logo_container">
+            <img src="https://img.freepik.com/vector-gratis/vector-degradado-logotipo-colorido-pajaro_343694-1365.jpg" alt="not working" />
+          </div>
+          <NavBar user={user} setUser={setUser} />
+          <UserMenu/>
+        </header>
 
         <Routes>
-          <Route path="/profile" element=""/>
-          <Route path="*" element= {<LoginNote user={user}/>} />
+          <Route path="/profile" element="" />
+          <Route path="*" element={<LoginNote user={user} />} />
         </Routes>
-          
 
 
 
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route
-              path="/login"
-              element={<Login loginUser={loginUser} loginError={loginError} />}
-            />
-            <Route path="/logout" element={<Logout setUser={setUser}/>} />
-            <Route path="/frutas" element={<Frutas />} />
-            <Route path="/contact" element={<Contacto />} />
-            <Route path="/frutas/:fruitName" element={<DetalleFrutas />} />
-            <Route path="/register" element={<Registro />} />
 
-            <Route
-              path="/profile"
-              element={
-                <AuthRoute user={user} component={<Profile user={user} />} />
-              }
-            />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/carrousel" element={<Carrousel />} />
+          <Route
+            path="/login"
+            element={<Login loginUser={loginUser} loginError={loginError} />}
+          />
+          <Route path="/logout" element={<Logout setUser={setUser} />} />
+          <Route path="/destinos" element={<Frutas />} />
+          <Route path="/contacto" element={<Contacto />} />
+          {/*<Route path="/destinos/:idDestino" element={<DetalleDestino />} />*/}
+          {/*<Route path="/destinos/:idActividad" element={<DetalleActividad/>}*/}
+          <Route path="/register" element={<Registro />} />
 
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
-        <footer>
-          <Footer />
-        </footer>
+          <Route
+            path="/profile"
+            element={
+              <AuthRoute user={user} component={<Profile user={user} />} />
+            }
+          />
+
+          {/*<Route path="/infouser" element={<UserInfo/>} /> */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </div>
+      <Footer />
     </>
   );
 }

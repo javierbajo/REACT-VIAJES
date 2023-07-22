@@ -1,39 +1,35 @@
 import {Link} from 'react-router-dom'
-import "../../styles/NavBar.css"
+import "../../styles/NavBar/main.css"
 
 
 const NavBar = ({user}) => {
 
-
-  
   return (
-    
-      <nav className="nav">
-        <ul className="menu">
+      <nav className="header_nav">
+        <ul className="nav_menu">
           <li>
-            <Link to="/" className="lis">Home</Link>
+            <Link to="/" className="nav_menu_li">Home</Link>
           </li>
           <li>
-            <Link to="/frutas" className="lis">Frutas</Link>
+            <Link to="/frutas" className="nav_menu_li">Frutas</Link>
           </li>
           {user ?
           <li>
-            <Link to="/logout" className="lis" >Logout</Link>
+            <Link to="/logout" className="nav_menu_li" >Logout</Link>
           </li>:
               <li>
-              <Link to="/login" className="lis">Login</Link>
+              <Link to="/login" className="nav_menu_li">Login</Link>
             </li>}
           <li>
-            <Link to="/contact" className="lis">Contacto</Link>
+            <Link to="/contacto" className="nav_menu_li">Contacto</Link>
           </li>
           {/* {user ?
           <li>
-            <Link to="/profile" className="lis">Perfil</Link>
+            <Link to="/profile" className="nav_menu_li">Perfil</Link>
           </li> :''
           } */}
         </ul>
       </nav>
-    
   )
 }
 
