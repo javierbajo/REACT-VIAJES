@@ -9,7 +9,9 @@ const Carrousel = () => {
         type: "loop",
         perPage: 1,
         autoplay: "play",
-        interval: 1000,
+        interval: 2000,
+        pauseOnHover: false,
+        arrows:false,
         intersection: {
             inView: {
                 autoplay: true,
@@ -23,7 +25,7 @@ const Carrousel = () => {
         <>
 
             <div className="carrousel">
-                <div className="encima"></div>
+
                 <Splide tag="section" options={options} className="section_carrousel" >
                     {characters.map((character, i) => {
                         return (

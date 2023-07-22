@@ -1,24 +1,24 @@
 import React from 'react'
-import '../../styles/Footer.css'
+import '../../styles/Footer/Footer.css'
 
 const Footer = () => {
   return (
     <footer>
-      <footer class="footer">
-        <img src="" alt="" class="logo-dos" />
-        <ul class="footer-ul">
-          <li class="ul-li">
+      <footer className="footer">
+        <img src="" alt="" className="logo-dos" />
+        <ul className="footer-ul">
+          <li className="ul-li">
             Empresa
-            <ul class="li-ul">
+            <ul className="li-ul">
               <li>Acerca de</li>
               <li>Empleo</li>
               <li>For the record</li>
             </ul>
           </li>
 
-          <li class="ul-li">
+          <li className="ul-li">
             Comunidades
-            <ul class="li-ul">
+            <ul className="li-ul">
               <li>Para artistas</li>
               <li>Desarrolladores</li>
               <li>Publicidad</li>
@@ -27,9 +27,9 @@ const Footer = () => {
             </ul>
           </li>
 
-          <li class="ul-li">
+          <li className="ul-li">
             Enlaces útiles
-            <ul class="li-ul">
+            <ul className="li-ul">
               <li>Asistencia</li>
               <li>Reproductor web</li>
               <li>App gratis para móvil</li>
@@ -37,13 +37,13 @@ const Footer = () => {
           </li>
         </ul>
 
-        <div class="redes-sociales">
-          <div class="instagram"></div>
-          <div class="twitter"></div>
-          <div class="facebook"></div>
+        <div className="redes-sociales">
+          <div className="instagram"></div>
+          <div className="twitter"></div>
+          <div className="facebook"></div>
         </div>
 
-        <ul class="footer-ul-debajo">
+        <ul className="footer-ul-debajo">
           <li>Legal</li>
           <li>Centro de Privacidad</li>
           <li>Política de privacidad</li>
