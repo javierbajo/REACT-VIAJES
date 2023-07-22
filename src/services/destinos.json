@@ -18,7 +18,12 @@
                 "ubicacion": "Centro histórico de París"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689979140/Destinos/paris_37bc088a_1280x720_jwmj2l.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689979140/Destinos/87c891d0-7f75-11e8-b6b0-0242ac110007_aj43is.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689979140/Destinos/a60c7ed4-cc5d-478e-98fa-0c4210ed2908_n7vqho.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689979140/Destinos/948ecba9-2af5-4b9c-876f-9c51bb46043b_xfo3qd.webp"
+          ]
     },
 
     {
@@ -40,7 +45,12 @@
               "ubicacion": "Central Park, Manhattan"
             },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689981875/Destinos/Estatua-de-la-Libertad_n2s3n0.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689981876/Destinos/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu__cropped_rr8mts.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689981885/Destinos/nycpc-nyc-skyline-1440x720_vqh4p9.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689981885/Destinos/central-park_tirfaq.webp"
+          ]
     },
 
     {
@@ -62,7 +72,12 @@
                 "ubicacion": "Torre de Tokio, Tokio"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689982396/Destinos/tokyo-4358758_1280_lnqzqz.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689982310/Destinos/91683_yho0zq.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689982301/Destinos/Por-que%CC%81-Tokio-es-una-de-las-ciudades-ma%CC%81s-sorprendentes_zjlk6o.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689982298/Destinos/giappone-tokyo-tempio-panorama_mi57ju.jpg"
+          ]
     },
 
     {
@@ -84,7 +99,12 @@
                 "ubicacion": "Covent Garden, Londres"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689983425/Destinos/descarga_1_csmoa6.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689983416/Destinos/tour-londres-antiguo-589x392_t5d6el.avif",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689983409/Destinos/x73083398_A-red-London-double-decker-bus-passes-the-London-Eye-as-it-is-driven-over-Westminster-B.jpg.pagespeed.ic_.WFyTInMTZk_cp2oai.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689983405/Destinos/caption_h3ee6w.jpg"
+          ]
     },
 
     {
@@ -106,7 +126,12 @@
                 "ubicacion": "Vaticano, Roma"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689983729/Destinos/5e89ad90-8f10-11e8-b6b0-0242ac110007_kjkjti.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689983735/Destinos/fontana-di-trevi-roma-unsplash_sy7fkt.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689983740/Destinos/elle-fin-de-semana-en-roma-1642526556_z3f3vy.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689983745/Destinos/Roma-en-3-di%CC%81as_l3bb7f.jpg"
+          ]
     },
 
     {
@@ -128,7 +153,12 @@
                 "ubicacion": "Frente al mar, Barcelona"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689984138/Destinos/GettyImages-1392907424_mjgcvf.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689984131/Destinos/barcelona-29506_pvhypi.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689984126/Destinos/park-guell-barcelona-s-305364611_eqwufm.avif",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689984121/Destinos/GettyRF_519706257_l8pt6t.jpg"
+          ]
     },
 
     {
@@ -150,7 +180,12 @@
                 "ubicacion": "Frente a la playa de Bondi, Sídney"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689984715/Destinos/que-hacer-sidney-6_yar4tu.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689984711/Destinos/cual-es-la-mejor-epoca-para-viajar-a-sidney_ylxdzp.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689984708/Destinos/George_street_in_Sydney_Australia_k5ci79.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689984704/Destinos/Playa-Bondi-Beach-1024x576_nrdyzn.jpg"
+          ]
     },
 
     {
@@ -172,7 +207,12 @@
                 "ubicacion": "Frente a la playa de Copacabana, Río de Janeiro"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689985096/Destinos/panoramica-rio-janeiro-brasil_jqw4pe.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689985104/Destinos/Teatro_Municipal_-_panoramio__4_rfgyzl.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689985110/Destinos/75_oz7suz.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689985116/Destinos/GettyImages-488575011_hlir3h.webp"
+          ]
     },
 
     {
@@ -194,7 +234,12 @@
                 "ubicacion": "Frente al mar, Ciudad del Cabo"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689985702/Destinos/Cape-Town_gtg5cp.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689985706/Destinos/beach-sea-coast-ocean-bird-penguin-838124-pxhere.com_-scaled_lrxuub.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689985712/Destinos/760px-Mapcarta_zkqtcc.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689985720/Destinos/tour-ciudad-cabo-montana-mesa-589x392_cogslx.avif"
+          ]
     },
 
     {
@@ -216,7 +261,12 @@
                 "ubicacion": "Frente a las Montañas Rocosas, Vancouver"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689986038/Destinos/vista-panoramica-vancouver_kjci52.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689986043/Destinos/vancouver-canada_fyd0or.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689986049/Destinos/216226-British-Columbia_s2kfzq.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689986053/Destinos/Stanley_Park_Destination_Vancouver_Kazutoshi_Yoshimura_87768_PowerPoint_2000px_r7l7sp.webp"
+          ]
     },
 
     {
@@ -238,7 +288,12 @@
                 "ubicacion": "Frente al Bósforo, Estambul"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689986435/Destinos/3bae040b-2afb-4b11-9542-859eeb8ebaf1_wpvfza.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689986443/Destinos/estambul-restauracion-mezquita-azul_eegvvi.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689986443/Destinos/a_U0uvT3r_vw6umw.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689986443/Destinos/RXOWFRUDLVAQ5EJ6VVAANT4WYI_suqmgn.webp"
+          ]
     },
 
     {
@@ -260,7 +315,12 @@
                 "ubicacion": "Barrio de Recoleta, Buenos Aires"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689987097/Destinos/80ccbd4a-9d52-4b2a-b2b3-e9c254b3447c_alta-libre-aspect-ratio_default_0_etj5fr.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689987103/Destinos/EDD567B6-661E-481F-97ACD929AB125ABA_sz1wnl.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689987111/Destinos/caminito-1140x675_qjtr8l.png",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689987115/Destinos/1133674319_0_512_2730_2048_1920x0_80_0_0_09d945f6aa96192e68149fdd05529875_uhkcre.jpg"
+          ]
     },
 
     {
@@ -282,7 +342,12 @@
                 "ubicacion": "Centro de Bangkok"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689987432/Destinos/3af9262b-3d8b-40c6-b61d-e37ae1aa90aa_ivcprr.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689987436/Destinos/8236d066-1b7a-4c8b-a58a-08190a9738db_dqctyg.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689987440/Destinos/bangkok2_yun7ic.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689987441/Destinos/street-bangkok-thailand_16x9_hx1sso.avif"
+          ]
     },
 
     {
@@ -304,7 +369,12 @@
                 "ubicacion": "Frente a los canales de Ámsterdam"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689987654/Destinos/amsterdam-canales-puentes-hd_uym3b7.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689987654/Destinos/amsterdam-paises-bajos_m51bmf.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689987653/Destinos/zona-roja-amsterdam_zehch6.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689987653/Destinos/d77bcff2-a859-4785-bdb1-3b15a0887607_upqctr.webp"
+          ]
     },
 
     {
@@ -326,7 +396,12 @@
                 "ubicacion": "Potsdamer Platz, Berlín"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689987964/Destinos/Berlin_Brandenburger_Tor_im_Sonnenuntergang_Leitmotiv_German_Summer_Cities_wnbviv.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689987964/Destinos/shutterstock-302415089_6b607cdb_auh9mj.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689987968/Destinos/571ba00b-11cd-4a54-9f2a-5b38da2bc89e_wazlox.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689987969/Destinos/8b1efec5-edde-474d-ad26-3b6dfa093030_gd4pls.jpg"
+          ]
     },
 
     {
@@ -348,7 +423,12 @@
                 "ubicacion": "A orillas del río Moldava, Praga"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689988491/Destinos/praga_838db84b_230302140436_1200x630_vlzhal.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689988491/Destinos/98_w5k1wb.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689988492/Destinos/122830-Astronomical-Clock-Prague-Orloj-Prazsky-Orloj_yx1fne.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689988491/Destinos/praga_fng80g.webp"
+          ]
     },
 
     {
@@ -370,7 +450,12 @@
                 "ubicacion": "Centro de Copenhague"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689989027/Destinos/f.elconfidencial.com_original_036_cf6_706_036cf6706198f8ac3e0fbeb0a759e020_lre0xb.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689989027/Destinos/la-sirenita-de-copenhagen_dfxl4z.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689989027/Destinos/Str%C3%B8get_Erik_Hageman_ztklvi.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689989027/Destinos/GettyImages-599005948_qdcs6y.webp"
+          ]
     },
 
     {
@@ -392,7 +477,12 @@
                 "ubicacion": "Centro de Hong Kong"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689989338/Destinos/61600f039c816.r_d.1046-727-5764_gfbkvd.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689989338/Destinos/Hong-Kong-2_4_m5gufa.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689989342/Destinos/hongkong-main-data_qcacdw.avif",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689989344/Destinos/US_HongKong_HK_Header_kqtayb.jpg"
+          ]
     },
 
     {
@@ -414,7 +504,12 @@
                 "ubicacion": "Frente a los Jardines de la Bahía, Singapur"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689989632/Destinos/_104161841_singapore_ssparklingbusinessdistrictfoundingfatherleekuanyewkickedoffthekeepsingaporecleancampaignfiftyyearsagoinoctober2018-creditgettyimages_xuc87d.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689989632/Destinos/donde-alojarse-en-singapur.jpg_ywti8f.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689989633/Destinos/hotel-marina-bay-sands-singapur_98_m9nf2d.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689989633/Destinos/IG24T2CIR7KON6ZZM4GYHJIAOM_m9mo8i.avif"
+          ]
     },
 
     {
@@ -436,7 +531,12 @@
                 "ubicacion": "Frente a las Pirámides de Teotihuacán"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689989932/Destinos/CiudadMexico_e2khlh.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689989932/Destinos/San-Miguel-de-Allende-in-Guanajuato_fxhri4.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689989932/Destinos/GettyRF_508879694_ebjguz.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689989932/Destinos/WQ7ENFIBOVDEZELPNFMRPIRNNI_fn6eqs.avif"
+          ]
     },
 
     {
@@ -458,7 +558,12 @@
                 "ubicacion": "Centro de Dubái"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689990185/Destinos/dubai-skyline-at-dusk-jpg_header-144981_qy445u.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689990185/Destinos/gettyimages-1225427289-1-1674411305_lp3hde.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689990191/Destinos/destacada-vivir-trabajar-dubai_ydhotk.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689990191/Destinos/mapa-de-dubai_wkjfma.jpg"
+          ]
     },
 
     {
@@ -480,7 +585,12 @@
                 "ubicacion": "Frente al puerto de Auckland"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689990552/Destinos/Experiencias-GrowPro-en-Auckland_zcdenm.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689990552/Destinos/mount-maunganui-nueva-zelanda_oezu2r.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689990553/Destinos/queen-street_ab0zxv.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689990572/Destinos/c7c3ce7c816c5fa3d3ffe6c904bb6834_giymoq.jpg"
+          ]
     },
 
     {
@@ -502,7 +612,12 @@
                 "ubicacion": "Frente al agua, Estocolmo"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689990930/Destinos/a0fe0b3e-1469-412a-a45e-276f65e77702_mmpka3.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689990937/Destinos/123058_zg8yn2.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689990942/Destinos/98_1_vbufxu.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689990948/Destinos/estocolmo-suecia-14-noviembre-2016-panorama-invierno-escenico-ciudad-vieja-gamla-stan-1980-oficialmente-staden-mellan-broarna-ciudad-puentes-es-casco-antiguo-estocolmo-suecia_173948-5517_epuzrc.avif"
+          ]
     },
 
     {
@@ -524,7 +639,12 @@
                 "ubicacion": "Centro de Seúl"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689991230/Destinos/8e3nomYe_vbbtdc.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689991218/Destinos/DSC02074_750x563_tpzinj.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689991237/Destinos/Lugares-que-visitar-en-Seul-Corea-del-Sur_kubrqb.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689991242/Destinos/autumn-in-gyeongbokgung-palace-seoul-in-south-korea-1_ffrmeg.webp"
+          ]
     },
 
     {
@@ -546,7 +666,12 @@
                 "ubicacion": "Centro de Lisboa"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689991536/Destinos/lisbon_header-4117128_z5u8vp.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689991543/Destinos/lisboa-1617630975_bh5j77.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689991549/Destinos/lisboa-barrio-alfama-t.jpg_t2swrd.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689991690/Destinos/lisboa-puente-entre-continentes-donde-confluyen-tradicion-y-vanguardia-2022-02-04-lisboa-puente-entre-continentes-donde-confluyen-tradicion-y-vanguardia-9_cmlzn9.jpg"
+          ]
     },
 
     {
@@ -568,7 +693,12 @@
                 "ubicacion": "Frente al río Saigón, Ho Chi Minh"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689991913/Destinos/ho-chi-minh-city_nyjfna.avif",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689991912/Destinos/nightlife-in-ho-chi-minh-city-1_ymxwvg.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689991913/Destinos/23b0fb58-f6d8-4c68-89ad-4cc15ac766cb_qxbyb4.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689991913/Destinos/hcmc-1120046774-1_jazbgo.jpg"
+          ]
     },
 
     {
@@ -590,7 +720,12 @@
                 "ubicacion": "Centro de San Petersburgo"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689992114/Destinos/616d3e95c2d3f.r_d.1065-804-5693_etwf2v.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689992107/Destinos/4532331134_jrfiev.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689992106/Destinos/rusia_sanpetersburgo_hermitage_shutterstockrf_669812044_maraze_shutterstock_schk99.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689992106/Destinos/architecture-3287636_1920-1-1-655x368_fbco4e.jpg"
+          ]
     },
 
     {
@@ -612,7 +747,12 @@
                 "ubicacion": "Frente al Danubio, Budapest"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689992569/Destinos/que-ver-budapest_dkmkch.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689992569/Destinos/BartokBelaBoulevard_exbspa.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689992555/Destinos/Budapest-Hotels-1-scaled_ggphtr.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689992555/Destinos/ba0d6f79-6fb9-4ad6-bd5e-c277914c6a20_y1ynrb.webp"
+          ]
     },
 
     {
@@ -634,7 +774,12 @@
                 "ubicacion": "Cerca de los Jardines de Majorelle, Marrakech"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689992925/Destinos/que-ver-marrakech-min_vi8syn.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689992925/Destinos/90_c3phve.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689992925/Destinos/image_j7qvvt.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689992925/Destinos/marrakechportada-1566330578_s6wtwg.jpg"
+          ]
     },
 
     {
@@ -656,7 +801,12 @@
                 "ubicacion": "Cerca de la ciudadela de Machu Picchu"
               },
         "informacionAdicional": "Precios, fechas y disponibilidad están sujetos a cambios. Consulta con nuestro equipo de ventas para obtener más detalles sobre el paquete y las promociones especiales disponibles.",
-        "imagenes": "Shakira.jpg"
+        "imagenes": [
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689993178/Destinos/Plaza_de_Cusco_Allison_Bellido_ncmxcw.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689993177/Destinos/CuscoRainBlog3-1_xapgfq.webp",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689993177/Destinos/Montan%CC%83a-de-los-7-colores-Cusco_yex7ut.jpg",
+            "https://res.cloudinary.com/dgenowvll/image/upload/v1689993178/Destinos/Machu-Picchu-14-scaled_jruasr.jpg"
+          ]
     }
 
 
