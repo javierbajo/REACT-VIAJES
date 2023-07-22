@@ -6,7 +6,7 @@ const Frutas = () => {
   const [fruits, setFruits] = useState([]);
 
   const getDataAPI = async ()=>{
-      const response = await fetch('http://localhost:3001/fruits');
+      const response = await fetch('https://api-frutas.vercel.app/fruits');
       const res = await response.json();
       setFruits(res);
   }

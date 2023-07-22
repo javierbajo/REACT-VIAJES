@@ -14,6 +14,7 @@ import AuthRoute from "./components/AuthRoute/AuthRoute";
 import Profile from "./components/Profile/Profile";
 import Logout from "./components/Logout";
 import LoginNote from "./components/LoginNote";
+import Carrousel from "./components/Carrousel/Carrousel";
 
 function App() {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ function App() {
   const [userList, setUserList] = useState([]);
 
   const getDataUsersAPI = async () => {
-    const response = await fetch("http://localhost:3001/users/");
+    const response = await fetch("https://api-frutas.vercel.app/users");
     const res = await response.json();
     setUserList(res);
   };
@@ -73,14 +74,16 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/carrousel" element={<Carrousel/>}/>
             <Route
               path="/login"
               element={<Login loginUser={loginUser} loginError={loginError} />}
             />
             <Route path="/logout" element={<Logout setUser={setUser}/>} />
-            <Route path="/frutas" element={<Frutas />} />
-            <Route path="/contact" element={<Contacto />} />
-            <Route path="/frutas/:fruitName" element={<DetalleFrutas />} />
+            <Route path="/destinos" element={<Frutas />} />
+            <Route path="/contacto" element={<Contacto />} />
+            {/*<Route path="/destinos/:idDestino" element={<DetalleDestino />} />*/}
+            {/*<Route path="/destinos/:idActividad" element={<DetalleActividad/>}*/}
             <Route path="/register" element={<Registro />} />
 
             <Route
@@ -90,13 +93,12 @@ function App() {
               }
             />
 
+            {/*<Route path="/infouser" element={<UserInfo/>} /> */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
-        <footer>
-          <Footer />
-        </footer>
       </div>
+      <Footer/>
     </>
   );
 }
