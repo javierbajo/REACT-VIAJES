@@ -11,7 +11,10 @@ const NavBar = ({user}) => {
             <Link to="/" className="nav_menu_li">Home</Link>
           </li>
           <li>
-            <Link to="/frutas" className="nav_menu_li">Frutas</Link>
+            <Link to="/destinos" className="nav_menu_li">Destinos</Link>
+          </li>
+          <li>
+            <Link to="/actividades" className="nav_menu_li">Actividades</Link>
           </li>
           {user ?
           <li>

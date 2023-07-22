@@ -2,12 +2,12 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Home from "./components/Home/Home";
-import Frutas from "./components/Frutas/Frutas";
+import Destinos from "./components/Destinos/Destinos";
 import NavBar from "./components/NavBar/NavBar";
 import Login from "./components/Login/Login";
 import Contacto from "./components/Contacto/Contacto";
 import Footer from "./components/Footer/Footer";
-import DetalleFrutas from "./components/DetalleFrutas/DetalleFrutas";
+import DetalleDestino from "./components/Destinos/DetalleDestino";
 import NotFound from "./components/NotFound";
 import Registro from "./components/Registro/Registro";
 import AuthRoute from "./components/AuthRoute/AuthRoute";
@@ -16,6 +16,7 @@ import Logout from "./components/Logout";
 import LoginNote from "./components/LoginNote";
 import Carrousel from "./components/Carrousel/Carrousel";
 import UserMenu from './components/Dropdown/UserMenu';
+import Actividades from "./components/Actividades/Actividades";
 function App() {
   const navigate = useNavigate();
   // traigo los datos de los usuarios de la DB--------------
@@ -80,11 +81,14 @@ function App() {
             element={<Login loginUser={loginUser} loginError={loginError} />}
           />
           <Route path="/logout" element={<Logout setUser={setUser} />} />
-          <Route path="/destinos" element={<Frutas />} />
-          <Route path="/contacto" element={<Contacto />} />
-          {/*<Route path="/destinos/:idDestino" element={<DetalleDestino />} />*/}
-          {/*<Route path="/destinos/:idActividad" element={<DetalleActividad/>}*/}
+          <Route path="/destinos" element={<Destinos />} />
+          <Route path="/destinos/:idDestino" element={<DetalleDestino />} />
+          {/* <Route path="/destinos/:idActividad" element={<DetalleActividad/>} /> */}
+
+          <Route path="/actividades" element={<Actividades />} />
+
           <Route path="/register" element={<Registro />} />
+          <Route path="/contacto" element={<Contacto />} />
 
           <Route
             path="/profile"
