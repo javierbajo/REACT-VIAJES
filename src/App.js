@@ -21,7 +21,7 @@ function App() {
   const [userList, setUserList] = useState([]);
 
   const getDataUsersAPI = async () => {
-    const response = await fetch("http://localhost:3001/users/");
+    const response = await fetch("https://api-frutas.vercel.app/users");
     const res = await response.json();
     setUserList(res);
   };
