@@ -2,6 +2,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
 import { Intersection } from '@splidejs/splide-extension-intersection';
 import characters from "./characters.json"
+import destinos from "./destinos.json"
 import "./styles.css"
 const Carrousel = () => {
 
@@ -27,12 +28,11 @@ const Carrousel = () => {
             <div className="carrousel">
 
                 <Splide tag="section" options={options} className="section_carrousel" >
-                    {characters.map((character, i) => {
+                    {destinos[0].destinationImg.map((image, i) => {
                         return (
                             <SplideSlide key={i}>
                                 <article className="character_card">
-                                    <img src={character.imagen} alt="characterimage" />
-                                    <h3>{character.nombre}</h3>
+                                    <img src={image} alt="destinationimage" />
                                 </article>
                             </SplideSlide>
                         )
