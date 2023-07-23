@@ -1,6 +1,7 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
+import userContext from "./components/Context/userContext";
 import Home from "./components/Home/Home";
 import Destinos from "./components/Destinos/Destinos";
 import NavBar from "./components/NavBar/NavBar";
@@ -65,6 +66,7 @@ function App() {
           <NavBar user={user} setUser={setUser} />
           <UserMenu/>
         </header>
+        <userContext.Provider value={user}>
 
         <Routes>
           <Route path="/profile" element="" />
@@ -101,6 +103,7 @@ function App() {
           {/*<Route path="/infouser" element={<UserInfo/>} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </userContext.Provider>
       </div>
       <Footer />
     </>
