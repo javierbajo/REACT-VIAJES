@@ -12,12 +12,12 @@ const intialState = {
 
 const Registro = () => {
   // ************************************************************
-  const getDataUsersAPI = async () => {
+  const postDataUsersAPI = async () => {
     /*
     const response = await fetch("http://localhost:3001/users/");
     const res = await response.json();
     */
-    const response = await fetch("http://localhost:3001/users", {
+    const response = await fetch("https://api-frutas.vercel.app/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -50,7 +50,7 @@ const Registro = () => {
     //loginUser(formData);
 
     //useEffect(() => {
-    getDataUsersAPI();
+    postDataUsersAPI();
     console.log("Se han enviado los datos");
     setFormData(intialState);
 

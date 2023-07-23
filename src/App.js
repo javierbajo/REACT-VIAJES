@@ -26,6 +26,7 @@ function App() {
     const response = await fetch("https://api-frutas.vercel.app/users");
     const res = await response.json();
     setUserList(res);
+
   };
   useEffect(() => {
     getDataUsersAPI();
