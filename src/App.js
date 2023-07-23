@@ -19,6 +19,7 @@ import Carrousel from "./components/Carrousel/Carrousel";
 import UserMenu from './components/Dropdown/UserMenu';
 import Actividades from "./components/Actividades/Actividades";
 import {API} from './services/api';
+import DetalleActividad from "./components/Actividades/DetalleActividad";
 
 
 
@@ -87,7 +88,7 @@ function App() {
           <Route path="/logout" element={<Logout setUser={setUser} />} />
           <Route path="/destinos" element={<Destinos />} />
           <Route path="/destinos/:idDestino" element={<DetalleDestino />} />
-          {/* <Route path="/destinos/:idActividad" element={<DetalleActividad/>} /> */}
+          <Route path="/actividades/:idActividad" element={<DetalleActividad/>} />
 
           <Route path="/actividades" element={<Actividades />} />
 
