@@ -17,8 +17,8 @@ const renderDestinations = (destinations) =>{
           <h2 className="fruitCard-name">
             {destination.destinationPlace} ({destination.destinationDescription})
           </h2>
-          {/* <p className="fruitCard-p1">Origen: {destination.origin}</p>
-          <p className="fruitCard-p2">Precio:{destination.priceKg}€/Kg</p> */}
+          <p className="fruitCard-p1">Hotel: {destination.destinationHotel.hotelName}</p>
+          <p className="fruitCard-p2">Precio:{destination.destinationPrice}€/Kg</p>
 
         </div>
       </li>
