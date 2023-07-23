@@ -10,22 +10,25 @@
   color: white;
 }
 
-article.character_card {
+article.destination_card {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 4px solid white;
 }
 
-.character_card img {
-  width: 30%;
-  height: 50%;
+.destination_card img {
+  object-fit: cover ;
+  min-width: 100%;
+  min-height: 100px;
+  filter: brightness(50%);
 }
 
 div.carrousel {
   width: 100%;
+  height: 100vh;
   position: relative;
   z-index: 0;
 }
@@ -34,6 +37,8 @@ div.carrousel {
   width: 100%;
   height: 100%;
   background-color: aquamarine;
+  display: flex;
+  gap: 20%;
 }
 
 div.encima{
