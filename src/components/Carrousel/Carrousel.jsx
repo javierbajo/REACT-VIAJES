@@ -11,15 +11,15 @@ const Carrousel = () => {
 
     const [destinations, setDestinations] = useState([]);
 
-  const getDataAPI = async ()=>{
-      const response = await fetch('');
-      const res = await response.json();
-      setDestinations(res);
-  }
-  useEffect(() => {
+    const getDataAPI = async () => {
+        const response = await fetch('');
+        const res = await response.json();
+        setDestinations(res);
+    }
+    useEffect(() => {
 
-    getDataAPI();
-  },[]);
+        getDataAPI();
+    }, []);
 
     const options = {
         type: "slide",
@@ -27,10 +27,10 @@ const Carrousel = () => {
         autoplay: "play",
         interval: 2000,
         pauseOnHover: false,
-        rewind:true,
+        rewind: true,
         rewindByDrag: true,
         rewindSpeed: 1500,
-        arrows:false,
+        arrows: false,
         intersection: {
             inView: {
                 autoplay: true,
