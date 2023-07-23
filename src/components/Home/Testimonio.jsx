@@ -13,7 +13,7 @@ const htmlTestimonio = testimonios.map((person, i)=>{
     <div className='contenedor-texto-testimonio'>
         <p className='nombre-testimonio'>
           <strong>{person.nombre} </strong>de {person.pais}</p>
-        <p className='cargo-testimonio'>{person.cargo} en 
+        <p className='cargo-testimonio'>{person.cargo}
         <strong> {person.empresa}</strong>
         </p>
         <p className='texto-testimonio'>"{person.testimonio}"</p>

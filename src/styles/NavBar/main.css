@@ -171,16 +171,18 @@ table {
   margin-left: 12%;
 }
 .header_nav > .nav_menu > li {
-  font-size: 1.1em;
+  font-size: 1em;
 }
 .header_nav > .nav_menu > li > a {
   text-decoration: none;
-  padding: 100% 30% 80% 30%;
+  padding: 100% 30% 75% 30%;
+  color: black;
   transition: 0.3s;
 }
 .header_nav > .nav_menu > li > a:hover {
-  background-color: #e2f4f7;
+  background-color: #8be9f9;
+  color: white;
 }
 .header_nav > .nav_menu > li:last-child > a {
-  padding: 100% 15% 55% 15%;
+  padding: 100% 15% 50% 15%;
 }/*# sourceMappingURL=main.css.map */
