@@ -17,6 +17,10 @@ import LoginNote from "./components/LoginNote";
 import Carrousel from "./components/Carrousel/Carrousel";
 import UserMenu from './components/Dropdown/UserMenu';
 import Actividades from "./components/Actividades/Actividades";
+import {API} from './services/api';
+
+
+
 function App() {
   const navigate = useNavigate();
   // traigo los datos de los usuarios de la DB--------------
@@ -34,23 +38,23 @@ function App() {
   //-----------------------------------
   // primer estado del user es null, aún no está definido
   const [user, setUser] = useState(null);
+
   const [loginError, setLoginError] = useState("");
 
-  const loginUser = (formData) => {
-    const existUser = userList.find(
-      (user) =>
-        user.email === formData.email && user.password === formData.password
-    );
-
-    if (existUser) {
-      // Segundo estado del user, información del usuario logado
-      setUser(existUser);
-      setLoginError("");
-      navigate("/");
-    } else {
-      // tercer estado del user, usuario no encontrado
-      setUser(false);
-      setLoginError("Usuario o contraseña incorrecta");
+    const loginUser = (formData, prevRoute)=>{
+    //Este find es para cuando hacemos consultas a userList
+    try {
+       API.post('/users/login', formData)
+      .then((res)=>{
+      console.log(res.data);
+      setUser(res.data.userInfo);
+      sessionStorage.setItem('token', JSON.stringify(res.data));//Guardamos todo: token y UserInfo
+      //Ahora variamos la variable de estado user
+      });
+    } catch (error) {
+      setLoginError(error)
+      console.log(loginError)
+      navigate(prevRoute || "/")
     }
   };
 
@@ -69,9 +73,6 @@ function App() {
           <Route path="/profile" element="" />
           <Route path="*" element={<LoginNote user={user} />} />
         </Routes>
-
-
-
 
         <Routes>
           <Route path="/" element={<Home />} />
