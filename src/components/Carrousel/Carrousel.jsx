@@ -12,7 +12,7 @@ const Carrousel = () => {
     const [destinations, setDestinations] = useState([]);
 
     const getDataAPI = async () => {
-        const response = await fetch('');
+      const response = await fetch('https://api-node-viajes.vercel.app/destinations');
         const res = await response.json();
         setDestinations(res);
     }
