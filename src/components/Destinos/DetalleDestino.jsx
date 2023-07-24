@@ -1,19 +1,18 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import BtnLoQuiero from '../Profile/BtnLoQuiero';
 
 
 const DetalleDestino = () => {
+  const tipoProducto = 'destination';
   const { idDestino } = useParams();
   const [destination, setDestination] = useState(undefined);
 
   const getDataAPI = async ( ) => {
 
     // const findDestination = await axios.get(`https://api-node-viajes.vercel.app/destinations/id/${idDestino}`);
-    const response = await fetch(
-      `https://api-node-viajes.vercel.app/destinations/id/${idDestino}`
-    );
+    const response = await fetch(`https://api-node-viajes.vercel.app/destinations/id/${idDestino}`);
     const findDestination = await response.json();
 
     console.log(findDestination[0]);
@@ -65,6 +64,7 @@ const DetalleDestino = () => {
           </p>
           <p className="fruitCard-p2">Precio:{destination.destinationPrice}€</p>
         </div> 
+        <BtnLoQuiero tipoProducto = {tipoProducto} idProducto={idDestino} />
       </>
     );
 
