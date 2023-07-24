@@ -18,12 +18,20 @@ const Carrousel = () => {
         setDestinations(res);
     }
 
-    const ref = useRef()
+    const ref = useRef(null);
+
     useEffect(() => {
-        setInterval(() => {
-            ref.current.splide.go('>');
-        }, 3000);
+        if (ref.current) {
+            const interval = setInterval(() => {
+                ref.current.splide.go('>');
+            }, 3000);
+
+            // Si necesitas detener el autoplay cuando el componente se desmonta,
+            // puedes desactivar el intervalo aquí.
+            return () => clearInterval(interval);
+        }
     }, []);
+
     useEffect(() => {
 
         getDataAPI();
@@ -60,7 +68,7 @@ const Carrousel = () => {
                                     <img src={destination.destinationImg[0]} alt="destinationimage" />
                                     <div className="destination_information">
                                         <span className="destination_name">{destination.destinationPlace}</span>
-                                        <span className="destination_hotel">{destination.destinationHotel.hotelName }</span>
+                                        <span className="destination_hotel">{destination.destinationHotel.hotelName}</span>
                                     </div>
                                 </article>
                             </SplideSlide>
