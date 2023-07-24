@@ -26,17 +26,17 @@ import DetalleActividad from "./components/Actividades/DetalleActividad";
 function App() {
   const navigate = useNavigate();
   // traigo los datos de los usuarios de la DB--------------
-  const [userList, setUserList] = useState([]);
+  // const [userList, setUserList] = useState([]);
 
-  const getDataUsersAPI = async () => {
-    const response = await fetch("https://api-frutas.vercel.app/users");
-    const res = await response.json();
-    setUserList(res);
+  // const getDataUsersAPI = async () => {
+  //   const response = await fetch("https://api-frutas.vercel.app/users");
+  //   const res = await response.json();
+  //   setUserList(res);
 
-  };
-  useEffect(() => {
-    getDataUsersAPI();
-  }, []);
+  // };
+  // useEffect(() => {
+  //   getDataUsersAPI();
+  // }, []);
   //console.log(userList);
   //-----------------------------------
   // primer estado del user es null, aún no está definido
@@ -73,10 +73,10 @@ function App() {
         </header>
         <userContext.Provider value={user}>
 
-        <Routes>
+        {/* <Routes>
           <Route path="/profile" element="" />
           <Route path="*" element={<LoginNote user={user} />} />
-        </Routes>
+        </Routes> */}
 
         <Routes>
           <Route path="/" element={<Home />} />
