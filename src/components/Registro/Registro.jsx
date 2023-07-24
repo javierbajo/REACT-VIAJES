@@ -2,22 +2,23 @@ import { useState } from "react";
 import '../../styles/Register.css';
 
 const intialState = {
-  email: "",
-  password: "",
-  userName: "",
-  userLastname: "",
-  adress: "",
-  fruits: [],
+  email: '',//
+  password: '',//
+  username: '',//
+  role: 'user',
+  telefono: '',
+  nombre: '',
+  apellidos: '',
+  direccion: '',
+  destination: [],
+  activity: [] 
 };
 
 const Registro = () => {
   // ************************************************************
   const postDataUsersAPI = async () => {
-    /*
-    const response = await fetch("http://localhost:3001/users/");
-    const res = await response.json();
-    */
-    const response = await fetch("https://api-frutas.vercel.app/users", {
+    console.log(formData)
+    const response = await fetch("https://api-node-viajes.vercel.app/users/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,13 +36,10 @@ const Registro = () => {
   const [formData, setFormData] = useState(intialState);
 
   const changeInput = (event) => {
-    //OTRA FORMA DE PONER LO MISMO
-    /* const nombreInput = event.target.name; 
-        const valorInput = event.target.value;
-        setFormData({...formdata, [nombreInput]: valorInput});*/
+    
     const { value, name } = event.target;
     setFormData({ ...formData, [name]: value });
-    console.log(formData);
+    //console.log(formData);
   };
 
   const submitForm = (event) => {
@@ -50,7 +48,7 @@ const Registro = () => {
     //loginUser(formData);
 
     //useEffect(() => {
-    postDataUsersAPI();
+    postDataUsersAPI(formData);
     console.log("Se han enviado los datos");
     setFormData(intialState);
 
@@ -73,35 +71,55 @@ const Registro = () => {
               onChange={changeInput}
               value={formData.email}
             />
-            <label htmlFor="userName">Nombre</label>
+            <label htmlFor="username">Nombre de usuario</label>
             <input
               className="register-input-nombre"
-              type="name"
-              name="userName"
-              placeholder="nombre"
-              id="userName"
+              type="text"
+              name="username"
+              placeholder="nombre de usuario"
+              id="username"
               onChange={changeInput}
-              value={formData.userName}
+              value={formData.username}
             />
-            <label htmlFor="userLastname">Apellido</label>
+            <label htmlFor="nombre">Nombre</label>
+            <input
+              className="register-input-nombre"
+              type="text"
+              name="nombre"
+              placeholder="nombre"
+              id="nombre"
+              onChange={changeInput}
+              value={formData.nombre}
+            />
+            <label htmlFor="apellidos">Apellidos</label>
             <input
               className="register-input-apellido"
-              type="name"
-              name="userLastname"
-              placeholder="apellido"
-              id="userLastname"
+              type="text"
+              name="apellidos"
+              placeholder="apellidos"
+              id="apellidos"
               onChange={changeInput}
-              value={formData.userLastname}
+              value={formData.apellidos}
             />
-            <label htmlFor="adress">Dirección</label>
+            <label htmlFor="direccion">Dirección</label>
             <input
               className="register-input-dirección"
-              type="name"
-              name="adress"
+              type="text"
+              name="direccion"
               placeholder="dirección"
-              id="adress"
+              id="direccion"
               onChange={changeInput}
-              value={formData.adress}
+              value={formData.direccion}
+            />
+            <label htmlFor="telefono">Teléfono</label>
+            <input
+              className="register-input-dirección"
+              type="text"
+              name="telefono"
+              placeholder="dirección"
+              id="telefono"
+              onChange={changeInput}
+              value={formData.telefono}
             />
             <label htmlFor="password">Contraseña</label>
             <input
