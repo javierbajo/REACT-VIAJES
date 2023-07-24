@@ -18,6 +18,12 @@ import LoginNote from "./components/LoginNote";
 import Carrousel from "./components/Carrousel/Carrousel";
 import UserMenu from './components/Dropdown/UserMenu';
 import Actividades from "./components/Actividades/Actividades";
+
+
+import Admin from './components/Admin/Admin';
+
+
+
 function App() {
   const navigate = useNavigate();
   // traigo los datos de los usuarios de la DB--------------
@@ -102,7 +108,13 @@ function App() {
 
           {/*<Route path="/infouser" element={<UserInfo/>} /> */}
           <Route path="*" element={<NotFound />} />
+
+          <Route path="/admin" element={<Admin />} />
+          
+
+
         </Routes>
+       
         </userContext.Provider>
       </div>
       <Footer />
