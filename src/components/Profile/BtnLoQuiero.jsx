@@ -1,0 +1,43 @@
+import userContext from '../Context/userContext';
+import { useContext } from 'react';
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import '../../styles/BtnLoQuiero.css';
+
+const BtnLoQuiero = ({tipoProducto, idProducto}) => {
+
+const {user, setUser} = useContext(userContext);
+
+
+const navigate = useNavigate();
+
+const addProduct = () =>{
+    const userPivote = user;
+    userPivote[tipoProducto].push(idProducto);
+    setUser(userPivote);
+    navigate("/añadidoCesta");
+    console.log(user);
+}
+
+const goToLogin =()=>{
+    navigate("/login");
+}
+
+
+
+  return (
+   <div className="BtnLoQuiero-div">
+    {user ?
+    <button className="BtnLoQuiero-btn" onClick={addProduct}
+    >Lo quiero</button>
+    :
+    <button className="BtnLoQuiero-btn" onClick={goToLogin}
+    >Si lo quieres, logéate!</button>
+ 
+    }
+   </div>
+
+  )
+}
+
+export default BtnLoQuiero

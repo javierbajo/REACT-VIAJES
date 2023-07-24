@@ -23,6 +23,7 @@ import DetalleActividad from "./components/Actividades/DetalleActividad";
 import ChangePassword from "./components/ChangePassword/changePassword";
 
 
+import AñadidoCesta from "./components/Profile/AñadidoCesta";
 
 
 
@@ -45,6 +46,7 @@ function App() {
   // primer estado del user es null, aún no está definido
   const [user, setUser] = useState(null);
 
+
   const [loginError, setLoginError] = useState("");
 
     const loginUser = (formData, prevRoute)=>{
@@ -64,7 +66,8 @@ function App() {
       
     }
   };
-
+  
+  
   return (
     <>
       <div className="App">
@@ -98,6 +101,7 @@ function App() {
 
           <Route path="/actividades" element={<Actividades />} />
           <Route path="/actividades/:idActividad" element={<DetalleActividad/>} />
+          <Route path="/añadidoCesta" element={<AñadidoCesta/>} />
 
 
 

@@ -1,18 +1,18 @@
 import React from 'react'
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Loquiero from '../Profile/Loquiero';
+import BtnLoQuiero from '../Profile/BtnLoQuiero';
+
 
 const DetalleActividad = () => {
+    const tipoProducto = 'activity';
     const { idActividad } = useParams();
     const [activity, setActivity] = useState(undefined);
   
     const getDataAPI = async ( ) => {
   
       // const findDestination = await axios.get(`https://api-node-viajes.vercel.app/destinations/id/${idDestino}`);
-      const response = await fetch(
-        `https://api-node-viajes.vercel.app/activities/id/${idActividad}`
-      );
+      const response = await fetch(`https://api-node-viajes.vercel.app/activities/id/${idActividad}`);
       const findActivity = await response.json();
   
       console.log(findActivity[0]);
@@ -46,11 +46,10 @@ const DetalleActividad = () => {
             </p>
             <p className="fruitCard-p1">
               Emplazamiento: {destination.destinationHotel.hotelLocation}
-            </p> */}
+            </p>  */}
             <p className="fruitCard-p2">Precio:{activity.activityPrice}€</p>
           </div> 
-            <Loquiero/>
-
+            <BtnLoQuiero tipoProducto = {tipoProducto} idProducto={idActividad} />
         </>
       );
   
