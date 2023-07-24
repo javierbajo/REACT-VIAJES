@@ -20,6 +20,9 @@ import UserMenu from './components/Dropdown/UserMenu';
 import Actividades from "./components/Actividades/Actividades";
 import {API} from './services/api';
 import DetalleActividad from "./components/Actividades/DetalleActividad";
+import ChangePassword from "./components/ChangePassword/changePassword";
+
+
 
 
 
@@ -50,28 +53,31 @@ function App() {
        API.post('/users/login', formData)
       .then((res)=>{
       console.log(res.data);
-      setUser(res.data.userInfo);
+      setUser(res.data.userInfo);//Ahora variamos la variable de estado user
       sessionStorage.setItem('token', JSON.stringify(res.data));//Guardamos todo: token y UserInfo
-      //Ahora variamos la variable de estado user
+      // navigate(prevRoute || "/")
+      navigate("/")
       });
     } catch (error) {
       setLoginError(error)
       console.log(loginError)
-      navigate(prevRoute || "/")
+      
     }
   };
 
   return (
     <>
       <div className="App">
+
+      <userContext.Provider value={{user, setUser}}>
         <header className="div_header">
           <div className="logo_container">
             <img src="https://img.freepik.com/vector-gratis/vector-degradado-logotipo-colorido-pajaro_343694-1365.jpg" alt="not working" />
           </div>
-          <NavBar user={user} setUser={setUser} />
+          <NavBar  />
           <UserMenu/>
         </header>
-        <userContext.Provider value={user}>
+        
 
         {/* <Routes>
           <Route path="/profile" element="" />
@@ -97,6 +103,8 @@ function App() {
 
           <Route path="/register" element={<Registro />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/changepsw" element={<ChangePassword />} />
+          
 
           <Route
             path="/profile"
@@ -104,7 +112,7 @@ function App() {
               <AuthRoute user={user} component={<Profile user={user} />} />
             }
           />
-
+          
           {/*<Route path="/infouser" element={<UserInfo/>} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>

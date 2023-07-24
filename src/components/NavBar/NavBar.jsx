@@ -1,9 +1,12 @@
 import {Link} from 'react-router-dom'
 import "../../styles/NavBar/main.css"
+import userContext from '../Context/userContext';
+import { useContext } from 'react';
 
+const NavBar = () => {
 
-const NavBar = ({user}) => {
-
+  const {user} = useContext(userContext);
+  
   return (
       <nav className="header_nav">
         <ul className="nav_menu">
@@ -23,14 +26,14 @@ const NavBar = ({user}) => {
               <li>
               <Link to="/login" className="nav_menu_li">Login</Link>
             </li>}
-          <li>
+          {/* <li>
             <Link to="/contacto" className="nav_menu_li">Contacto</Link>
-          </li>
-          {/* {user ?
+          </li> */}
+          {user ?
           <li>
             <Link to="/profile" className="nav_menu_li">Perfil</Link>
           </li> :''
-          } */}
+          }
         </ul>
       </nav>
   )
