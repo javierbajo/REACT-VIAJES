@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Loquiero from '../Profile/Loquiero';
 
 const DetalleActividad = () => {
     const { idActividad } = useParams();
@@ -48,6 +49,8 @@ const DetalleActividad = () => {
             </p> */}
             <p className="fruitCard-p2">Precio:{activity.activityPrice}€</p>
           </div> 
+            <Loquiero/>
+
         </>
       );
   

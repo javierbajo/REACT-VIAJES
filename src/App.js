@@ -86,11 +86,14 @@ function App() {
             element={<Login loginUser={loginUser} loginError={loginError} />}
           />
           <Route path="/logout" element={<Logout setUser={setUser} />} />
+          
           <Route path="/destinos" element={<Destinos />} />
           <Route path="/destinos/:idDestino" element={<DetalleDestino />} />
-          <Route path="/actividades/:idActividad" element={<DetalleActividad/>} />
 
           <Route path="/actividades" element={<Actividades />} />
+          <Route path="/actividades/:idActividad" element={<DetalleActividad/>} />
+
+
 
           <Route path="/register" element={<Registro />} />
           <Route path="/contacto" element={<Contacto />} />
