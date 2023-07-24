@@ -58,7 +58,7 @@ function App() {
       setUser(res.data.userInfo);//Ahora variamos la variable de estado user
       sessionStorage.setItem('token', JSON.stringify(res.data));//Guardamos todo: token y UserInfo
       // navigate(prevRoute || "/")
-      navigate("/")
+      //navigate("/")
       });
     } catch (error) {
       setLoginError(error)
