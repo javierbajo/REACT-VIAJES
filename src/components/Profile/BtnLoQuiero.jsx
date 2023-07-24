@@ -15,8 +15,12 @@ const addProduct = () =>{
     const userPivote = user;
     userPivote[tipoProducto].push(idProducto);
     setUser(userPivote);
-    navigate("/");
+    navigate("/añadidoCesta");
     console.log(user);
+}
+
+const goToLogin =()=>{
+    navigate("/login");
 }
 
 
@@ -27,11 +31,9 @@ const addProduct = () =>{
     <button className="BtnLoQuiero-btn" onClick={addProduct}
     >Lo quiero</button>
     :
-    <div>
-
-    <p>{tipoProducto}</p>
-    <p>{idProducto}</p>
-    </div>
+    <button className="BtnLoQuiero-btn" onClick={goToLogin}
+    >Si lo quieres, logéate!</button>
+ 
     }
    </div>
 

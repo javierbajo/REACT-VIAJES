@@ -20,6 +20,7 @@ import UserMenu from './components/Dropdown/UserMenu';
 import Actividades from "./components/Actividades/Actividades";
 import {API} from './services/api';
 import DetalleActividad from "./components/Actividades/DetalleActividad";
+import AñadidoCesta from "./components/Profile/AñadidoCesta";
 
 
 
@@ -94,6 +95,7 @@ function App() {
 
           <Route path="/actividades" element={<Actividades />} />
           <Route path="/actividades/:idActividad" element={<DetalleActividad/>} />
+          <Route path="/añadidoCesta" element={<AñadidoCesta/>} />
 
 
 
