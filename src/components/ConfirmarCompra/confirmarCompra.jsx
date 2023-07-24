@@ -8,9 +8,10 @@ const ConfirmarCompra = () => {
     const {user, setUser} = useContext(userContext);
     const sessionToken = JSON.parse(sessionStorage.getItem('token'));
   
-      
+    setUser({ ...user, ['password']: '' });
   
-  
+    console.log(user);
+    
       const updateDataUsersAPI = async () => {
         
         const response = await fetch(`https://api-node-viajes.vercel.app/users/update/${user._id}`, {
@@ -34,6 +35,13 @@ const ConfirmarCompra = () => {
         
       };
 
+      const changeInput = (event) => {
+    
+        const { value, name } = event.target;
+        setUser({ ...user, [name]: value });
+        //console.log(formData);
+      };
+
       const submitForm = (event) => {
         event.preventDefault();
         updateDataUsersAPI(user);
@@ -49,6 +57,18 @@ const ConfirmarCompra = () => {
             <form onSubmit={submitForm} className="login-form" >
               
 
+
+
+          <label htmlFor="password">Contraseña</label> 
+             <input
+              className="register-input-password"
+              type="password"
+              name="password"
+              placeholder="password"
+              id="password"
+              onChange={changeInput}
+              value=''
+            />
 
 
               <button type="submit" className="register-button">
