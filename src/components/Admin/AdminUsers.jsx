@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Admin.css'; 
+import './AdminUsers.css'; 
 
 function AdminUsers() {
   const [users, setUsers] = useState([]);
@@ -18,15 +18,23 @@ function AdminUsers() {
     }
   };
 
+  const goBack = () => {
+    window.history.back();
+  };
+
   return (
-    <>
+    <div className="container">
+      <button onClick={goBack} className="go-back-btn">Go Back</button>
       {users
-        .filter(user => user.actividades.length > 0 || user.destinos.length > 0) // Filtro usuarios que tengan actividades o destinos
+        .filter(user => user.actividades.length > 0 || user.destinos.length > 0) 
         .map((user, index) => (
-          <p key={index}>{user.name}</p>
+          <div key={index} className="rounded-card">
+            <p>{user.name}</p>
+          </div>
       ))}
-    </>
+    </div>
   );
 }
 
 export default AdminUsers;
+

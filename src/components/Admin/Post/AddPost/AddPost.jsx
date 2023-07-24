@@ -1,5 +1,9 @@
 
 import React, { useState } from 'react';
+import './AddPost.css';
+
+
+
 
 function AgregarPost() {
   const [post, setPost] = useState({ title: '', content: '' }); // Un post tiene título y contenido
@@ -36,28 +40,28 @@ function AgregarPost() {
   };
 
   return (
-    <div>
-      <h2>Agregar nuevo post</h2>
-      <form onSubmit={handleFormSubmit}>
-        <input
-          type="text"
-          name="title"
-          value={post.title}
-          onChange={handleInputChange}
-          placeholder="Título del post"
-          required
-        />
-        <textarea
-          name="content"
-          value={post.content}
-          onChange={handleInputChange}
-          placeholder="Contenido del post"
-          required
-        />
-        <button type="submit">Agregar post</button>
-      </form>
-    </div>
-  );
+    <div className="AgregarPost">
+    <h2>Agregar nuevo post</h2>
+    <form onSubmit={handleFormSubmit}>
+      <input
+        type="text"
+        name="title"
+        value={post.title}
+        onChange={handleInputChange}
+        placeholder="Título del post"
+        required
+      />
+      <textarea
+        name="content"
+        value={post.content}
+        onChange={handleInputChange}
+        placeholder="Contenido del post"
+        required
+      />
+      <button type="submit">Agregar post</button>
+    </form>
+  </div>
+);
 }
 
 

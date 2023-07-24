@@ -1,5 +1,9 @@
 // EliminarPost.js
 import React, { useEffect, useState } from 'react';
+import './Delete.css';
+
+
+
 
 function EliminarPost() {
   const [posts, setPosts] = useState([]);
@@ -31,16 +35,16 @@ function EliminarPost() {
   };
 
   return (
-    <div>
-      <h2>Eliminar un post</h2>
-      {posts.map(post => (
-        <div key={post.id}>
-          <h3>{post.title}</h3>
-          <p>{post.content}</p>
-          <button onClick={() => handleDeletePost(post.id)}>Eliminar post</button>
-        </div>
-      ))}
-    </div>
+    <div className="EliminarPost">
+    <h2>Eliminar un post</h2>
+    {posts.map(post => (
+      <div key={post.id} className="post">
+        <h3>{post.title}</h3>
+        <p>{post.content}</p>
+        <button onClick={() => handleDeletePost(post.id)}>Eliminar post</button>
+      </div>
+    ))}
+  </div>
   );
 }
 

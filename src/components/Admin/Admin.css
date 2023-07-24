@@ -1,49 +1,78 @@
-/* Admin.css */
+.AdminPost h2 {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .admin-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 76px;
-    border-radius: 16px;
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
-    background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 76px;
+  border-radius: 16px;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+  background-color: white;
+}
+
+.admin-container header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.admin-container h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.admin-container .admin-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.admin-container .admin-menu-item {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.admin-container .admin-menu-item:hover {
+  background-color: #0056b3;
+}
+
+.admin-container p {
+  color: #555;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+  .admin-container {
+    padding: 20px;
   }
-  
-  .admin-container header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1rem;
+
+  .AdminPost h2 {
+    font-size: 1.5em;
   }
-  
+
   .admin-container h1 {
-    color: #333;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
   }
-  
+
   .admin-container .admin-menu {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: column;
   }
-  
-  .admin-container .admin-menu-item {
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-  }
-  
-  .admin-container .admin-menu-item:hover {
-    background-color: #0056b3;
-  }
-  
+
   .admin-container p {
-    color: #555;
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
   }
-  
+}

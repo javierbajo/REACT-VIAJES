@@ -21,6 +21,8 @@ import Actividades from "./components/Actividades/Actividades";
 
 
 import Admin from './components/Admin/Admin';
+import AdminPost from "./components/Admin/Post/AdminPost";
+import AdminUsers from "./components/Admin/AdminUsers";
 
 
 
@@ -105,11 +107,16 @@ function App() {
               <AuthRoute user={user} component={<Profile user={user} />} />
             }
           />
-
-          {/*<Route path="/infouser" element={<UserInfo/>} /> */}
-          <Route path="*" element={<NotFound />} />
-
           <Route path="/admin" element={<Admin />} />
+
+
+        <Route path="/admin/Home" element={<Admin/>} />
+        <Route path="/admin/usuarios" element={<AdminUsers />} />
+        <Route path="/admin/post" element={<AdminPost />} />
+
+        <Route path="*" element={<NotFound />} />
+
+          
           
 
 
