@@ -4,40 +4,49 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import '../../styles/BtnLoQuiero.css';
 
-const BtnLoQuiero = ({tipoProducto, idProducto}) => {
+const BtnLoQuiero = ({ tipoProducto, idProducto }) => {
 
-const {user, setUser} = useContext(userContext);
-
-
-const navigate = useNavigate();
-
-const addProduct = () =>{
-    const userPivote = user;
-    userPivote[tipoProducto].push(idProducto);
-    setUser(userPivote);
-    navigate("/añadidoCesta");
-    console.log(user);
-}
-
-const goToLogin =()=>{
-    navigate("/login");
-}
+    const { user, setUser } = useContext(userContext);
 
 
+    const navigate = useNavigate();
 
-  return (
-   <div className="BtnLoQuiero-div">
-    {user ?
-    <button className="BtnLoQuiero-btn" onClick={addProduct}
-    >Lo quiero</button>
-    :
-    <button className="BtnLoQuiero-btn" onClick={goToLogin}
-    >Si lo quieres, logéate!</button>
- 
+    const addProduct = () => {
+        const userPivote = user;
+        userPivote[tipoProducto].push(idProducto);
+        setUser(userPivote);
+        navigate("/añadidoCesta");
+        console.log(user);
     }
-   </div>
 
-  )
+    const goToLogin = () => {
+        navigate("/login");
+    }
+    const goToCesta = () => {
+        navigate("/confirmarCompra");
+    }
+
+
+    return (
+        <>
+            <div className="BtnLoQuiero-div">
+                {user ?
+                    <div>
+
+                        <button className="BtnLoQuiero-btn" onClick={addProduct}
+                        >Lo quiero</button>
+
+                        <button className="BtnLoQuiero-btn" onClick={goToCesta}
+                        >Vé a tu cesta</button>
+                    </div>
+                    :
+                    <button className="BtnLoQuiero-btn" onClick={goToLogin}
+                    >Si lo quieres, logéate!</button>
+                }
+            </div>
+
+        </>
+    )
 }
 
 export default BtnLoQuiero

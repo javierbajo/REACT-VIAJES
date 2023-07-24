@@ -21,10 +21,8 @@ import Actividades from "./components/Actividades/Actividades";
 import {API} from './services/api';
 import DetalleActividad from "./components/Actividades/DetalleActividad";
 import ChangePassword from "./components/ChangePassword/changePassword";
-
-
 import AñadidoCesta from "./components/Profile/AñadidoCesta";
-
+import ConfirmarCompra from "./components/ConfirmarCompra/confirmarCompra";
 
 
 function App() {
@@ -58,7 +56,7 @@ function App() {
       setUser(res.data.userInfo);//Ahora variamos la variable de estado user
       sessionStorage.setItem('token', JSON.stringify(res.data));//Guardamos todo: token y UserInfo
       // navigate(prevRoute || "/")
-      navigate("/")
+      // navigate("/")
       });
     } catch (error) {
       setLoginError(error)
@@ -102,6 +100,7 @@ function App() {
           <Route path="/actividades" element={<Actividades />} />
           <Route path="/actividades/:idActividad" element={<DetalleActividad/>} />
           <Route path="/añadidoCesta" element={<AñadidoCesta/>} />
+          <Route path="/confirmarCompra" element={<ConfirmarCompra/>} />
 
 
 
