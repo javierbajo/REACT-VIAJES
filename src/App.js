@@ -42,6 +42,7 @@ function App() {
   // primer estado del user es null, aún no está definido
   const [user, setUser] = useState(null);
 
+
   const [loginError, setLoginError] = useState("");
 
     const loginUser = (formData, prevRoute)=>{
@@ -60,7 +61,8 @@ function App() {
       navigate(prevRoute || "/")
     }
   };
-
+  
+  
   return (
     <>
       <div className="App">
@@ -71,7 +73,7 @@ function App() {
           <NavBar user={user} setUser={setUser} />
           <UserMenu/>
         </header>
-        <userContext.Provider value={user}>
+        <userContext.Provider value={{user,setUser}}>
 
         {/* <Routes>
           <Route path="/profile" element="" />
