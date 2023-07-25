@@ -23,6 +23,8 @@ import DetalleActividad from "./components/Actividades/DetalleActividad";
 import ChangePassword from "./components/ChangePassword/changePassword";
 import AñadidoCesta from "./components/Profile/AñadidoCesta";
 import ConfirmarCompra from "./components/ConfirmarCompra/confirmarCompra";
+import ResumenCompra from "./components/ConfirmarCompra/ResumenCompra";
+import InfoDatosPersonales from "./components/Profile/InfoDatosPersonales";
 import Admin from './components/Admin/Admin';
 import AdminPost from "./components/Admin/Post/AdminPost";
 import AdminUsers from  "./components/Admin/AdminUsers/AdminUsers"
@@ -51,6 +53,7 @@ function App() {
   //-----------------------------------
   // primer estado del user es null, aún no está definido
   const [user, setUser] = useState(null);
+  const [userCero, setUserCero] = useState(null);
 
 
   const [loginError, setLoginError] = useState("");
@@ -62,6 +65,8 @@ function App() {
       .then((res)=>{
       console.log(res.data);
       setUser(res.data.userInfo);//Ahora variamos la variable de estado user
+      setUserCero(res.data.userInfo);//Ahora variamos la variable de estado userCero para que valga lo mismo que user
+
       sessionStorage.setItem('token', JSON.stringify(res.data));//Guardamos todo: token y UserInfo
       // navigate(prevRoute || "/")
       // navigate("/")
@@ -78,7 +83,7 @@ function App() {
     <>
       <div className="App">
 
-      <userContext.Provider value={{user, setUser}}>
+      <userContext.Provider value={{user, setUser, userCero, setUserCero}}>
         <header className="div_header">
           <div className="logo_container">
             <img src="https://img.freepik.com/vector-gratis/vector-degradado-logotipo-colorido-pajaro_343694-1365.jpg" alt="not working" />
@@ -115,6 +120,7 @@ function App() {
           <Route path="/register" element={<Registro />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/changepsw" element={<ChangePassword />} />
+          <Route path="/infoDatosPersonales" element={<InfoDatosPersonales />} />
           
 
           <Route

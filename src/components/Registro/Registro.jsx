@@ -1,5 +1,6 @@
 import { useState } from "react";
 import '../../styles/Register.css';
+import { useNavigate } from 'react-router-dom';
 
 const intialState = {
   email: '',//
@@ -16,6 +17,7 @@ const intialState = {
 
 const Registro = () => {
   // ************************************************************
+  const navigate = useNavigate();
   const postDataUsersAPI = async () => {
     console.log(formData)
     const response = await fetch("https://api-node-viajes.vercel.app/users/register", {
@@ -51,6 +53,7 @@ const Registro = () => {
     postDataUsersAPI(formData);
     console.log("Se han enviado los datos");
     setFormData(intialState);
+    navigate("/login");
 
     //}, []);
   };
@@ -116,7 +119,7 @@ const Registro = () => {
               className="register-input-dirección"
               type="text"
               name="telefono"
-              placeholder="dirección"
+              placeholder="teléfono"
               id="telefono"
               onChange={changeInput}
               value={formData.telefono}
