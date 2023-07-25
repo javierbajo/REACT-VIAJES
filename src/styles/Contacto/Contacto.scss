@@ -1,0 +1,111 @@
+@import "reset";
+@import "var";
+
+
+.container {
+    margin-bottom: 0;
+    margin-left: 0;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+    background-color: beige;
+   
+    @include table(0%,100%,78vh,0%,0%,0px);
+    @include descktop(0%,100%,157vh,0px,0%,0px);
+    
+  
+
+  h2 {
+    
+    margin-bottom: 31px;
+    color: brown;
+    width: 50px;
+    height: 91px;
+    margin-left: 30px;
+    margin-top: 123px;
+    font-size: 101px;
+    padding: 0px;
+    display: block;
+    @include table(31px,50px,68px,144px,140px,101px);
+    @include descktop(19px,100px,68px,413px,136px,100px);
+}
+
+  h3 {
+    padding: 8px;
+    margin-bottom: -11px;
+    color: black;
+    width: 99%;
+    height: 100px;
+    margin-left: 1px;
+    margin-top: 31px;
+    font-size: 32px;
+    display: inline-block;
+    @include table(18px,90%,81px,5px,4px,24px);
+    @include descktop(54px,97%,92px,8px,23px,43px);
+  }
+  p{
+    padding: 10px;
+    margin-top: -37px;
+    color: gray;
+    display: block;
+    font-size: 22px;
+    margin-bottom: -21px;
+    height: 85px;
+    width: 100%;
+    margin-left:0px;
+    @include table(-27px,77%,98px,17px,-37px,22px);
+    @include descktop(-16px,96%,100px,12px,-44px,29px);
+  }
+  .field {
+    margin-bottom: 10px;
+    @include table(20px,50%,300px,114px,-49px,16px);
+    @include descktop(20px,50%,300px,376px,77px,26px);
+  }
+  
+  .field label {
+    padding: 3px;
+    display: block;
+    font-size: 32px;
+    color: black;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 69px;
+  }
+  
+  .field input {
+    display: block;
+    min-width: 250px;
+    line-height: 1.5;
+    font-size: 23px;
+    margin-left: 69px;
+  }
+  .field textarea{
+    width: 68%;
+    margin-left: 68px;
+    font-size: 15px;
+   @include tabletextarea(74%,67px,15px);
+   @include descktoptextarea(46%,67px,22px);
+  }
+  
+  input[type="submit"] {
+    margin-left: 76px;
+    display: block;
+    padding: 6px 30px;
+    font-size: 15px;
+    background-color: #4460AA;
+    color: #fff;
+    border: none;
+  }
+
+  .checkbox{
+    margin-bottom: 14px;
+    margin-left: -113px;
+    margin-top: 7px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+
+
+}

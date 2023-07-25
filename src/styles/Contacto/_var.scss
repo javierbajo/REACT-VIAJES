@@ -1,0 +1,54 @@
+
+
+
+
+@mixin table ($margin-bottom,$widt,$height,$margin-left,$margin-top,$font-size){
+    @media(min-width: 768px){
+        margin-bottom:$margin-bottom;
+        width:$widt;
+        height: $height;
+        margin-left: $margin-left;
+        margin-top: $margin-top;
+        font-size:$font-size;
+        
+
+    }
+  
+}
+@mixin tabletextarea($width,$margin-left,$font-size){
+
+     @media(min-width: 768px){
+    width: $width;
+    margin-left:$margin-left;
+    font-size:$font-size;
+     }
+}
+
+@mixin descktop ($margin-bottom,$widt,$height,$margin-left,$margin-top,$font-size){
+    @media(min-width: 1200px){
+        margin-bottom:$margin-bottom;
+        width:$widt;
+        height: $height;
+        margin-left: $margin-left;
+        margin-top: $margin-top;
+        font-size:$font-size;
+        
+
+    }
+  
+}
+
+@mixin descktoptextarea($width,$margin-left,$font-size){
+
+    @media(min-width: 1200px){
+   width: $width;
+   margin-left:$margin-left;
+   font-size:$font-size;
+    }
+}
+
+@mixin descktopcheckbox($margin-bottom,$margin-left,$margin-top){
+    margin-bottom: $margin-bottom;
+    margin-left: $margin-left;
+    margin-top: $margin-top;
+}
