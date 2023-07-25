@@ -1,8 +1,9 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import AdminUsers from './AdminUsers/AdminUsers';
 import AdminPost from './Post/AdminPost'
-import './Admin.css';
-import './Button.css';
+import './Admin.css'
+
+
 
 function Admin() {
   return (
@@ -10,9 +11,9 @@ function Admin() {
       <h1>Página de Administrador</h1>
 
       <Routes>
-      <Route path="/Home" element={<Admin/>} />
+      <Route path="/home" element={<Admin/>} />
         <Route path="/usuarios" element={<AdminUsers />} />
-        <Route path="/Home/post" element={<AdminPost />} />
+        <Route path="/post" element={<AdminPost />} />
 
       </Routes>
       

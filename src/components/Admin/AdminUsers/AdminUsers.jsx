@@ -18,13 +18,13 @@ function AdminUsers() {
     }
   };
 
-  const goBack = () => {
+  const handleGoBack = () => { // Cambia el nombre de la función para que coincida con tu botón
     window.history.back();
   };
 
   return (
     <div className="container">
-      <button onClick={goBack} className="go-back-btn">Go Back</button>
+      <button onClick={handleGoBack} className="goBackButton">Volver atrás</button> {/* Aquí se agrega el botón */}
       {users
         .filter(user => user.actividades.length > 0 || user.destinos.length > 0) 
         .map((user, index) => (
@@ -32,6 +32,7 @@ function AdminUsers() {
             <p>{user.name}</p>
           </div>
       ))}
+      
     </div>
   );
 }
