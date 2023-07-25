@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import userContext from '../Context/userContext';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -44,8 +44,11 @@ const ResumenCompra = () => {
     //   setActividades(actividades);
     // }
 //----------------------------------------------------------------------------------------------------------
-    getDestinos();
-    console.log(destinos);
+useEffect(() => {
+  getDestinos();
+  console.log(destinos);
+}, []);
+
 
     // getActividades();
     // console.log(actividades);
