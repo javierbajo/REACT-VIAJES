@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-// import '../../styles/Frutas.css';
+  // import '../../styles/Actividades/Actividades.css';
 import ListActividades from './ListActividades';
 
 const Actividades = () => {
@@ -25,7 +25,7 @@ const Actividades = () => {
   },[]);
 
   return (
-    <div className='frutas-div'>
+    <div className='section-actividades'>
       <ListActividades activities = {activities} />
     </div>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import BtnLoQuiero from '../Profile/BtnLoQuiero';
-
+import '../../styles/Actividades/DetalleActividades.css';
 
 const DetalleActividad = () => {
     const tipoProducto = 'activity';
@@ -11,7 +11,7 @@ const DetalleActividad = () => {
   
     const getDataAPI = async ( ) => {
   
-      // const findDestination = await axios.get(`https://api-node-viajes.vercel.app/destinations/id/${idDestino}`);
+      // const findDestination = await axios.get(`https://api-node-viajes.vercel.app/destinations/id/${idactividad}`);
       const response = await fetch(`https://api-node-viajes.vercel.app/activities/id/${idActividad}`);
       const findActivity = await response.json();
   
@@ -26,28 +26,22 @@ const DetalleActividad = () => {
     if(activity){
       return (
         <>
-      <div className="fruitCard-imageContainer">
+      <div className="actividad-imageContainer">
             <img
               src={activity.activityImg}
               alt={activity.activityPlace}
-              className="fruitCard-image"
+              className="actividad-image"
             />
           </div>
   
-          <div className="fruitCard-info">
-            <h2 className="fruitCard-name">
+          <div className="actividad-info">
+            <h2 className="actividad-name">
               {activity.activityDate} ({activity.activityDescription})
             </h2>
-            {/* <p className="fruitCard-p1">
-              Hotel: {destination.destinationHotel.hotelName}
-            </p>
-            <p className="fruitCard-p1">
-              Categoría: {destination.destinationHotel.hotelCategory}
-            </p>
-            <p className="fruitCard-p1">
-              Emplazamiento: {destination.destinationHotel.hotelLocation}
-            </p>  */}
-            <p className="fruitCard-p2">Precio:{activity.activityPrice}€</p>
+            <p className="actividad-p1">Place:{activity.activityPlace}</p>
+           <p className="actividad-p1">Date:{activity.activityDate}</p>
+           <p className="actividad-p1">Place:{activity.activityTime}</p>
+            <p className="actividad-p2">Precio:{activity.activityPrice}€</p>
           </div> 
             <BtnLoQuiero tipoProducto = {tipoProducto} idProducto={idActividad} />
         </>

@@ -1,24 +1,24 @@
 import React from 'react'
-import '../../styles/ListFrutas.css'
+import '../../styles/Destinos/ListDestinos.css'
 import { Link } from 'react-router-dom';
 
 const renderDestinations = (destinations) =>{
     return destinations.map((destination,i) => (
         <Link to={`./${destination._id}`}style={{textDecoration: 'none'}} key={i}>
-      <li key={destination.id} className="fruitCard">
-        <div className="fruitCard-imageContainer">
+      <li key={destination.id} className="destino">
+        <div className="destino-imageContainer">
           <img
             src={destination.destinationImg[0]}
             alt={destination.destinationPlace}
-            className="fruitCard-image"
+            className="destino-image"
           />
         </div>
-        <div className="fruitCard-info">
-          <h2 className="fruitCard-name">
+        <div className="destino-info">
+          <h2 className="destino-name">
             {destination.destinationPlace} ({destination.destinationDescription})
           </h2>
-          <p className="fruitCard-p1">Hotel: {destination.destinationHotel.hotelName}</p>
-          <p className="fruitCard-p2">Precio:{destination.destinationPrice}€/Kg</p>
+          <p className="destino-p1">Hotel: {destination.destinationHotel.hotelName}</p>
+          <p className="destino-p2">Precio:{destination.destinationPrice}€/Kg</p>
 
         </div>
       </li>
