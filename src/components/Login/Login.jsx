@@ -28,7 +28,7 @@ const Login = ({ loginUser, loginError }) => {
     console.log("Se han enviado los datos");
     loginUser(formData);
     setFormData(intialState);
-    navigate("/infoDatosPersonales");
+    // navigate("/infoDatosPersonales");
   };
   //console.log(formData)
 
