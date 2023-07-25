@@ -1,24 +1,27 @@
 import React from "react";
 // import '../../styles/ListFrutas.css'
+import '../../styles/Actividades/ListActividades.css';
 import { Link } from "react-router-dom";
 
 const renderActivities = (activities) => {
   return activities.map((activity, i) => (
     <Link to={`./${activity._id}`} style={{ textDecoration: "none" }} key={i}>
-      <li key={activity.id} className="destino">
-        <div className="destino-imageContainer">
+      <li key={activity.id} className="actividad">
+        <div className="actividad-imageContainer">
           <img
             src={activity.activityImg}
             alt={activity.activityName}
-            className="destino-image"
+            className="actividad-image"
           />
         </div>
-        <div className="destino-info">
-          <h2 className="destino-name">
+        <div className="actividad-info">
+          <h2 className="actividad-name">
             {activity.activityName} ({activity.activityDescription})
           </h2>
-          {/* <p className="destino-p1">Origen: {destination.origin}</p>
-          <p className="destino-p2">Precio:{destination.priceKg}€/Kg</p> */}
+          <p className="actividad_place">Place:{activity.activityPlace}</p>
+           <p className="actividad_date">Date:{activity.activityDate}</p>
+           <p className="actividad_time">Place:{activity.activityTime}</p>
+          <p className="actividad_precio">Precio:{activity.activityPrice}€</p>
         </div>
       </li>
     </Link>

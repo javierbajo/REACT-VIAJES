@@ -1,0 +1,28 @@
+.actividad-imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.actividad-imageContainer img {
+  width: 80%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.actividad-info {
+  padding: 16px;
+}
+.actividad-info-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.actividad-info .actividad-p1 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+.actividad-info .actividad-p2 {
+  font-size: 26px;
+  margin-top: 1em;
+  color: #ff0000;
+}/*# sourceMappingURL=DetalleActividades.css.map */
