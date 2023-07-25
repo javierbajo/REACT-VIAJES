@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import '../../styles/Login.css'
+import { useNavigate } from "react-router-dom";
 
 const intialState = {
     email:"",
@@ -9,6 +10,7 @@ const intialState = {
 
 const Login = ({ loginUser, loginError }) => {
 
+  const navigate = useNavigate();
   const [formData, setFormData] = useState(intialState);
 
   const changeInput = (event) => {
@@ -26,6 +28,7 @@ const Login = ({ loginUser, loginError }) => {
     console.log("Se han enviado los datos");
     loginUser(formData);
     setFormData(intialState);
+    navigate("/infoDatosPersonales");
   };
   //console.log(formData)
 

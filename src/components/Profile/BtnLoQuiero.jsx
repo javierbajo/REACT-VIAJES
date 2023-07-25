@@ -24,7 +24,9 @@ const BtnLoQuiero = ({ tipoProducto, idProducto }) => {
     const goToCesta = () => {
         navigate("/confirmarCompra");
     }
-
+    const info = () => {
+        navigate("/infoDatosPersonales");
+    }
 
     return (
         <>
@@ -42,7 +44,10 @@ const BtnLoQuiero = ({ tipoProducto, idProducto }) => {
                     <button className="BtnLoQuiero-btn" onClick={goToLogin}
                     >Si lo quieres, logéate!</button>
                 }
+                 <button className="BtnLoQuiero-btn" onClick={info}
+                        >ir a info</button>
             </div>
+
 
         </>
     )
