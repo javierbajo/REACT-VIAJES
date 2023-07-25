@@ -23,6 +23,14 @@ import DetalleActividad from "./components/Actividades/DetalleActividad";
 import ChangePassword from "./components/ChangePassword/changePassword";
 import AñadidoCesta from "./components/Profile/AñadidoCesta";
 import ConfirmarCompra from "./components/ConfirmarCompra/confirmarCompra";
+import Admin from './components/Admin/Admin';
+import AdminPost from "./components/Admin/Post/AdminPost";
+import AdminUsers from  "./components/Admin/AdminUsers/AdminUsers"
+
+
+
+
+
 
 
 function App() {
@@ -115,7 +123,12 @@ function App() {
               <AuthRoute user={user} component={<Profile user={user} />} />
             }
           />
-          
+           <Route path="/admin" element={<Admin />} />
+
+
+<Route path="/admin/Home" element={<Admin/>} />
+<Route path="/admin/usuarios" element={<AdminUsers />} />
+<Route path="/admin/post" element={<AdminPost />} />
           {/*<Route path="/infouser" element={<UserInfo/>} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>

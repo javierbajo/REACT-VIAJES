@@ -1,0 +1,36 @@
+div.AdminPost {
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 150px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: white;
+  }
+  
+  div.AdminPost h2 {
+    margin-bottom: 20px;
+  }
+  
+  div.AddPost, div.DeletePost {
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  .goBackButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .goBackButton:hover {
+    background-color: #0056b3;
+  }
