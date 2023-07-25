@@ -76,7 +76,7 @@ function App() {
             <img src="https://img.freepik.com/vector-gratis/vector-degradado-logotipo-colorido-pajaro_343694-1365.jpg" alt="not working" />
           </div>
           <NavBar  />
-          <UserMenu/>
+          <UserMenu user={user}/>
         </header>
         
 
