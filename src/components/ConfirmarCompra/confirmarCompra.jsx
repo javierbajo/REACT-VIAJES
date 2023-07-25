@@ -1,55 +1,58 @@
-import React from 'react'
+import React, { useState } from 'react'
 import userContext from '../Context/userContext';
 import { useContext } from 'react';
 
 
+
+
 const ConfirmarCompra = () => {
+
+    const [formPassword, setFormPassword] = useState("");
 
     const {user, setUser} = useContext(userContext);
     const sessionToken = JSON.parse(sessionStorage.getItem('token'));
   
-    setUser({ ...user, ['password']: '' });
   
     console.log(user);
     
-      const updateDataUsersAPI = async () => {
-        
-        const response = await fetch(`https://api-node-viajes.vercel.app/users/update/${user._id}`, {
-          method: "PUT",
-          headers: {
-            Accept: 'application/json',
+    const updateDataUsersAPI = async () => {
+//--------------------------------------------------------------------------
+      const response = await fetch(`https://api-node-viajes.vercel.app/users/update/${user._id}`, {
+        method: "PUT",
+        headers: {
+          Accept: 'application/json',
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',
           Authorization: {
             toString() {
             return `Bearer ${sessionToken.token || null}`;
-      },
-    },
+            },
           },
-          body: JSON.stringify(
+        },
+        body: JSON.stringify(
             user
           ),
-        });
-        const res = await response.json();
-        console.log(res);
-        
-      };
+      });
+//----------
+    const res = await response.json();
+    console.log(res);
+//--------------------------------------------------------------------------
+  };
 
-      const changeInput = (event) => {
-    
-        const { value, name } = event.target;
-        setUser({ ...user, [name]: value });
-        //console.log(formData);
-      };
+  const changeInput = (event) => {
+    setFormPassword(event.target.value);
+  };
+//--------------------------------------------------------------------------
 
-      const submitForm = (event) => {
-        event.preventDefault();
-        updateDataUsersAPI(user);
-        alert("Compra realizada");
-      };
+  const submitForm = (event) => {
+    event.preventDefault();
+    user.password = formPassword;
+    updateDataUsersAPI(user);
+    alert("Compra realizada");
+  };
   
   
-    return (
+  return (
   
       <div className="register-contenedor">
         <div className="register-contenedor-centrado">
@@ -67,7 +70,7 @@ const ConfirmarCompra = () => {
               placeholder="password"
               id="password"
               onChange={changeInput}
-              value=''
+              value={formPassword}
             />
 
 
