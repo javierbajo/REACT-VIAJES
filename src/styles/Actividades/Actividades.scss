@@ -1,0 +1,75 @@
+@import "reset";
+
+
+
+.divContainer{
+ 
+width: 100%;
+.section_actividades{
+    display: flex;
+    flex-direction: column;
+    
+    background-color: violet;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 92px;
+
+     .article_actividad{
+        display: flex;
+        flex-direction: column;
+        
+     padding: 40px 0 40px 0;
+    margin: 20px;
+    align-items: center;
+
+    
+    background-color: #aaa;
+
+
+    }
+    .a{
+        background-color: red;
+    }
+    .actividad_imagenContainer{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+
+    }
+    &.actividad_image{
+    
+       max-height: 100%;
+        max-width:100%;
+        
+    // height: auto; 
+    border-radius:30px;
+
+    }
+
+    .actividad_info{
+            width: 50%;
+    justify-content: center;
+    text-align: center;
+
+
+    &.actividad_name{
+         margin: 0;
+    line-height: 3;
+    font-family: 'Lato', sans-serif;
+    -webkit-text-stroke: 2px #444;
+    text-align: center;
+    font-size: 50px;
+    color: #ffcc01;
+
+    }
+    &.actividad_place{
+        width: 556px;
+        color:violet;
+    }
+
+    }
+}
+}
