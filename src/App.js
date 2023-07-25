@@ -65,7 +65,8 @@ function App() {
       .then((res)=>{
       console.log(res.data);
       setUser(res.data.userInfo);//Ahora variamos la variable de estado user
-      setUserCero(res.data.userInfo);//Ahora variamos la variable de estado userCero para que valga lo mismo que user
+      setUserCero(res.data.userInfo);
+      //Ahora variamos la variable de estado userCero para que valga lo mismo que user
 
       sessionStorage.setItem('token', JSON.stringify(res.data));//Guardamos todo: token y UserInfo
       // navigate(prevRoute || "/")

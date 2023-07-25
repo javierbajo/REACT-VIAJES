@@ -4,71 +4,88 @@ import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-
-//
 const ResumenCompra = () => {
-    const {user, userCero} = useContext(userContext);
-    if(user) console.log(user.email);
 
-  
+    const {user, userCero} = useContext(userContext);
+    const [destinos, setDestinos] = useState([]);
+    // const [actividades, setActividades] = useState([]);
+
+//----------------------------------------------------------------------------------------------------------
     const getDataAPI_destinations = async (idDestino) => {
-        console.log(idDestino);
         const response = await fetch(`https://api-node-viajes.vercel.app/destinations/id/${idDestino}`);
         const findDestination = await response.json();
-        // console.log(findDestination[0]);
         return findDestination[0];
       };
 
- 
-    const getDataAPI_activities = async (idActividad) => {
-        console.log(idActividad);
-        const response = await fetch(`https://api-node-viajes.vercel.app/activities/id/${idActividad}`);
-        const findActivity = await response.json();
-        // console.log(findActivity[0]);
-        return findActivity[0];
-      };
-
-      const actividadUno = getDataAPI_activities(user.activity[0]);
-      console.log(actividadUno);
-
-    //   console.log(actividadUno.activityPlace);
-
+      // const getDataAPI_activities = async (idActividad) => {
+      //   const response = await fetch(`https://api-node-viajes.vercel.app/destinations/id/${idActividad}`);
+      //   const findActivity = await response.json();
+      //   return findActivity[0];
+      // };
+      
+//----------------------------------------------------------------------------------------------------------
     const numeroDestinosComprados = userCero.destination.length;
     const numeroDestinosTotal = user.destination.length;
 
-    // const destinos =[];
-    // for(let i=0; i<numeroDestinosTotal; i++){
-    //         destinos.push(getDataAPI_destinations(user.destination[i]));
-    //         console.log(destinos[i]);
+    const numeroActividadesCompradas = userCero.activity.length;
+    const numeroActividadesTotal = user.activity.length;
+//----------------------------------------------------------------------------------------------------------
+    const getDestinos = async () => {
+      for(let i=0; i<numeroDestinosTotal; i++){
+        destinos.push(await getDataAPI_destinations(user.destination[i]));
+      }
+      setDestinos(destinos);
+    }
+
+    // const getActividades = async () => {
+    //   for(let i=0; i<numeroActividadesTotal; i++){
+    //     destinos.push(await getDataAPI_activities(user.activity[i]));
+    //   }
+    //   setActividades(actividades);
     // }
+//----------------------------------------------------------------------------------------------------------
+    getDestinos();
+    console.log(destinos);
 
-
-    // const actividades = user.destination.map((idActividad,i)=>{
-        // return getDataAPI_activities(idActividad);
-    // });
-    // const actividadUno = getDataAPI_activities(user.activity[0]);
-    // console.log(actividadUno.activityPlace)
-    // console.log(destinos);
+    // getActividades();
     // console.log(actividades);
-    // // for(let i=numeroDetinosComprados; i<=numeroTotalDestinos; i++){
-    // //     idDestino
-    // // }
-
+//----------------------------------------------------------------------------------------------------------
+  const renderDestinos = () => {
+    return destinos.map( (dest, i) => {
+        <li key={i}>
+          <div>
+            <p>{dest.destinationPlace}</p>
+          </div>
+        </li>
+  });
+  };
     
-
+  // const renderActividades = () => {
+  //   return actividades.map( (activ, i) => {
+  //       <li key={i}>
+  //         <div>
+  //           <p>{activ.activityPlace}</p>
+  //         </div>
+  //       </li>
+  // });
+  // };
+//----------------------------------------------------------------------------------------------------------
 
   return (
     <>
     <div>ResumenCompra</div>
     <div>
 
-        <div>{user.activity[0]}</div>
-        <div>Articulos comprados anteriormente:{numeroDestinosComprados}</div>
-        <div>Articulos en la cesta:{numeroDestinosTotal-numeroDestinosComprados}</div>
-
+        {/* <div>{user.activity[0]}</div> */}
+        <div>Destinos comprados anteriormente:{numeroDestinosComprados}</div>
+        <div>Destinos en la cesta:{numeroDestinosTotal-numeroDestinosComprados}</div>
+        <div>Actividades compradas anteriormente:{numeroActividadesCompradas}</div>
+        <div>Destinos en la cesta:{numeroActividadesTotal-numeroActividadesCompradas}</div>
     </div>
+    <section>{renderDestinos()}</section>;
+    {/* <section>{renderActividades()}</section>; */}
     </>
-  )
+  ) 
 }
 
 export default ResumenCompra

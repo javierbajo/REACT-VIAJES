@@ -11,9 +11,17 @@ const BtnLoQuiero = ({ tipoProducto, idProducto }) => {
     const navigate = useNavigate();
 
     const addProduct = () => {
-        const userPivote = user;
-        userPivote[tipoProducto].push(idProducto);
-        setUser(userPivote);
+        // const userPivote = user;
+        // userPivote[tipoProducto].push(idProducto);
+        // setUser(userPivote);
+
+        // const userDestino = [...user.destination]
+        // setUser({...user, [tipoProducto]:[...userDestino,idProducto]})
+
+        const userProducto = [...user[tipoProducto]]
+        setUser({...user, [tipoProducto]:[...userProducto,idProducto]})
+
+
         navigate("/añadidoCesta");
         console.log(user);
     }
