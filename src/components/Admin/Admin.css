@@ -1,3 +1,7 @@
+.header {
+  height: 350px;
+  background-color: #123456;
+}
 .admin-container {
   padding: 150px;
   text-align: center;
