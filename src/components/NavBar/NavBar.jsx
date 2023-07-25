@@ -31,7 +31,7 @@ const NavBar = () => {
           </li> */}
           {user ?
           <li>
-            <Link to="/profile" className="nav_menu_li">Perfil</Link>
+            <Link to="/infoDatosPersonales" className="nav_menu_li">Perfil</Link>
           </li> :''
           }
         </ul>
