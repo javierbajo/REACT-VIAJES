@@ -25,7 +25,7 @@ const Destinos = () => {
   },[]);
 
   return (
-    <div className='frutas-div'>
+    <div className='section-destino'>
       <ListDestinos destinations = {destinations} />
     </div>
   )

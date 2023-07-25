@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import BtnLoQuiero from '../Profile/BtnLoQuiero';
+import '../../styles/Destinos/DetalleDestino.css';
 
 
 const DetalleDestino = () => {
@@ -26,43 +27,45 @@ const DetalleDestino = () => {
   if(destination){
     return (
       <>
-    <div className="fruitCard-imageContainer">
+    <div className="destino-imageContainer">
           <img
             src={destination.destinationImg[0]}
             alt={destination.destinationPlace}
-            className="fruitCard-image"
+            className="destino-image"
           />
+          <div className="small-images">
           <img
             src={destination.destinationImg[1]}
             alt={destination.destinationPlace}
-            className="fruitCard-image"
+            className="destino-image"
           />
           <img
             src={destination.destinationImg[2]}
             alt={destination.destinationPlace}
-            className="fruitCard-image"
+            className="destino-image"
           />
           <img
             src={destination.destinationImg[3]}
             alt={destination.destinationPlace}
-            className="fruitCard-image"
+            className="destino-image"
           />
+          </div>
         </div>
 
-        <div className="fruitCard-info">
-          <h2 className="fruitCard-name">
+        <div className="destino-info">
+          <h2 className="destino-name">
             {destination.destinationDate} ({destination.destinationDescription})
           </h2>
-          <p className="fruitCard-p1">
+          <p className="destino-p1">
             Hotel: {destination.destinationHotel.hotelName}
           </p>
-          <p className="fruitCard-p1">
+          <p className="destino-p1">
             Categoría: {destination.destinationHotel.hotelCategory}
           </p>
-          <p className="fruitCard-p1">
+          <p className="destino-p1">
             Emplazamiento: {destination.destinationHotel.hotelLocation}
           </p>
-          <p className="fruitCard-p2">Precio:{destination.destinationPrice}€</p>
+          <p className="destino-p2">Precio:{destination.destinationPrice}€</p>
         </div> 
         <BtnLoQuiero tipoProducto = {tipoProducto} idProducto={idDestino} />
       </>

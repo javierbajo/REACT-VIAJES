@@ -26,28 +26,28 @@ const DetalleActividad = () => {
     if(activity){
       return (
         <>
-      <div className="fruitCard-imageContainer">
+      <div className="destino-imageContainer">
             <img
               src={activity.activityImg}
               alt={activity.activityPlace}
-              className="fruitCard-image"
+              className="destino-image"
             />
           </div>
   
-          <div className="fruitCard-info">
-            <h2 className="fruitCard-name">
+          <div className="destino-info">
+            <h2 className="destino-name">
               {activity.activityDate} ({activity.activityDescription})
             </h2>
-            {/* <p className="fruitCard-p1">
+            {/* <p className="destino-p1">
               Hotel: {destination.destinationHotel.hotelName}
             </p>
-            <p className="fruitCard-p1">
+            <p className="destino-p1">
               Categoría: {destination.destinationHotel.hotelCategory}
             </p>
-            <p className="fruitCard-p1">
+            <p className="destino-p1">
               Emplazamiento: {destination.destinationHotel.hotelLocation}
             </p>  */}
-            <p className="fruitCard-p2">Precio:{activity.activityPrice}€</p>
+            <p className="destino-p2">Precio:{activity.activityPrice}€</p>
           </div> 
             <BtnLoQuiero tipoProducto = {tipoProducto} idProducto={idActividad} />
         </>

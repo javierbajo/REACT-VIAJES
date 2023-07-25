@@ -1,0 +1,40 @@
+.destino-imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.destino-imageContainer img {
+  width: 80%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.destino-imageContainer img:first-child {
+  height: 50vh;
+}
+.destino-imageContainer .small-images {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 10px;
+}
+.destino-imageContainer .small-images img {
+  width: 30%;
+}
+
+.destino-info {
+  padding: 16px;
+}
+.destino-info-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.destino-info .destino-p1 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+.destino-info .destino-p2 {
+  font-size: 26px;
+  margin-top: 1em;
+  color: #ff0000;
+}/*# sourceMappingURL=DetalleDestino.css.map */
