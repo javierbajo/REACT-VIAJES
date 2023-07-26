@@ -37,21 +37,6 @@ function App() {
 
 
   const [loginError, setLoginError] = useState("");
-//--------------------------------------JAVI------------------------------------
-let allDestinations = [];
-
-const getDestinosAPI = async ()=>{
-  const response = await fetch('https://api-node-viajes.vercel.app/destinations');
-  const res = await response.json();
-  allDestinations = res;
-}
-
-useEffect(() => {
-  getDestinosAPI();
-},[]);
-
-//--------------------------------------JAVI------------------------------------
-
 
     const loginUser = (formData, prevRoute)=>{
     //Este find es para cuando hacemos consultas a userList
@@ -78,7 +63,7 @@ useEffect(() => {
     <>
       <div className="App">
 
-      <userContext.Provider value={{user, setUser, userCero, setUserCero, allDestinations}}>
+      <userContext.Provider value={{user, setUser, userCero, setUserCero}}>
         <header className="div_header">
           <div className="logo_container">
             <img src="https://img.freepik.com/vector-gratis/vector-degradado-logotipo-colorido-pajaro_343694-1365.jpg" alt="not working" />

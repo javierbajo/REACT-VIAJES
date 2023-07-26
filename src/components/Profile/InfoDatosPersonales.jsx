@@ -8,7 +8,6 @@ const InfoDatosPersonales = () => {
 
     const {user, setUser} = useContext(userContext);
     const navigate = useNavigate();
-    console.log(user);
 
     const goToProfile = () => {
         navigate("/profile");
