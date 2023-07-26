@@ -26,14 +26,9 @@ const NavBar = () => {
               <li>
               <Link to="/login" className="nav_menu_li">Login</Link>
             </li>}
-          {/* <li>
-            <Link to="/contacto" className="nav_menu_li">Contacto</Link>
-          </li> */}
-          {user ?
           <li>
-            <Link to="/infoDatosPersonales" className="nav_menu_li">Perfil</Link>
-          </li> :''
-          }
+            <Link to="/contacto" className="nav_menu_li">Contacto</Link>
+          </li>
         </ul>
       </nav>
   )

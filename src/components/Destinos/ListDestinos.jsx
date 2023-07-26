@@ -18,7 +18,7 @@ const renderDestinations = (destinations) =>{
             {destination.destinationPlace} ({destination.destinationDescription})
           </h2>
           <p className="destino-p1">Hotel: {destination.destinationHotel.hotelName}</p>
-          <p className="destino-p2">Precio:{destination.destinationPrice}€/Kg</p>
+          <p className="destino-p2">Precio:{destination.destinationPrice}€</p>
 
         </div>
       </li>

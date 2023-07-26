@@ -64,10 +64,10 @@ const ChangePassword = () => {
             setUser({ ...user, password: psw1 });
             console.log(user)
             updateDataUsersAPI(user);
-            alert("Datos actualizados"); 
+            //alert("Datos actualizados"); 
         }
         else{
-            alert("Error en la comprobación. No se ha podio actualizar la contraseña");
+            //alert("Error en la comprobación. No se ha podio actualizar la contraseña");
 
         }
                 

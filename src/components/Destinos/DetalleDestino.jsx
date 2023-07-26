@@ -66,7 +66,7 @@ const DetalleDestino = () => {
             Emplazamiento: {destination.destinationHotel.hotelLocation}
           </p>
           <p className="destino-p2">Precio:{destination.destinationPrice}€</p>
-        </div> 
+        </div>
         <BtnLoQuiero tipoProducto = {tipoProducto} idProducto={idDestino} />
       </>
     );

@@ -45,12 +45,12 @@ const BtnLoQuiero = ({ tipoProducto, idProducto }) => {
                         <button className="BtnLoQuiero-btn" onClick={addProduct}
                         >Lo quiero</button>
 
-                        <button className="BtnLoQuiero-btn" onClick={goToCesta}
+                        <button className="BtnLoQuiero-btn-02" onClick={goToCesta}
                         >Vé a tu cesta</button>
                     </div>
                     :
                     <button className="BtnLoQuiero-btn" onClick={goToLogin}
-                    >Si lo quieres, logéate!</button>
+                    >Cómpralo!</button>
                 }
                  {/* <button className="BtnLoQuiero-btn" onClick={info}
                         >ir a info</button> */}
