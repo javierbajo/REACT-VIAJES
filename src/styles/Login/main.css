@@ -162,6 +162,11 @@ aside.login {
   background-color: rgb(32, 31, 31);
   z-index: 2;
 }
+@media (max-width: 376px) {
+  aside.login {
+    width: 100%;
+  }
+}
 
 aside.login-email {
   z-index: 5;
@@ -180,11 +185,22 @@ aside.login > h2 {
   margin-right: 15%;
   margin-top: 30%;
 }
+@media (max-width: 376px) {
+  aside.login > h2 {
+    margin-right: -29%;
+  }
+}
 
 aside.login > p {
   width: 50%;
   color: #666565;
   margin-right: 15%;
+}
+@media (max-width: 376px) {
+  aside.login > p {
+    margin-right: -27%;
+    margin-top: 11px;
+  }
 }
 
 .input-box {
@@ -209,6 +225,12 @@ aside.login > p {
   color: white;
   transition: 0.5s;
 }
+@media (max-width: 376px) {
+  .name {
+    width: 152px;
+    margin-left: 55px;
+  }
+}
 
 .name:focus {
   border-bottom: 2px solid #447ffd;
@@ -225,6 +247,13 @@ aside.login > p {
   color: #888888;
   transition: 0.6s;
   white-space: nowrap;
+}
+@media (max-width: 376px) {
+  .div-label {
+    width: 45px;
+    margin-top: -4px;
+    margin-left: 88px;
+  }
 }
 
 .input-box > :is(.name:focus, .has-value) ~ .div-label {
@@ -254,6 +283,13 @@ button.login-button {
   height: 7%;
   padding: 0 6%;
 }
+@media (max-width: 376px) {
+  button.login-button {
+    width: 34%;
+    margin-left: 76px;
+    margin-top: 59px;
+  }
+}
 
 button.back {
   background: transparent;
@@ -280,6 +316,13 @@ button.next-button {
   width: 8vw;
   height: 8%;
 }
+@media (max-width: 376px) {
+  button.next-button {
+    width: 129px;
+    margin-left: 70px;
+    margin-top: 37px;
+  }
+}
 
 div.error {
   width: 70%;
@@ -295,6 +338,12 @@ div.error {
   display: flex;
   flex-direction: column;
   gap: 15%;
+}
+@media (max-width: 376px) {
+  .register_login {
+    width: 159px;
+    margin-left: 65px;
+  }
 }
 
 .register_login a {
