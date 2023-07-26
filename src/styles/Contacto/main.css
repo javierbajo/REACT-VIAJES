@@ -133,6 +133,13 @@ table {
   border-spacing: 0;
 }
 
+div.background {
+  background-image: url("https://humanidades.com/wp-content/uploads/2017/03/ciudad-3-e1565900111723.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
 section.section_form {
   width: 70%;
   height: 85vh;
@@ -142,7 +149,10 @@ section.section_form {
   top: 50%;
   left: 50%;
   translate: -50% 0;
-  border: 3px solid black;
+  border: 2px solid black;
+  box-shadow: 13px 18px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
 }
 section.section_form h1 {
   width: 100%;
@@ -176,10 +186,10 @@ section.section_form form div.content label {
   transition: 0.5s;
 }
 section.section_form form div.content label.label_name {
-  top: 12.8%;
+  top: 6%;
 }
 section.section_form form div.content label.label_email {
-  top: 28%;
+  top: 21%;
 }
 section.section_form form div.content .input {
   border: 1px solid black;
@@ -205,6 +215,18 @@ section.section_form form div.content .message_area {
 section.section_form form div.content .message_area:focus {
   width: 90%;
   border: 3px solid black;
+}
+section.section_form form div.content .submit_button {
+  margin-top: 10%;
+  width: 70%;
+  height: 10%;
+  border-radius: 20px;
+  background-color: rgb(83, 248, 193);
+  transition: 0.3s;
+}
+section.section_form form div.content .submit_button:hover {
+  cursor: pointer;
+  background-color: rgb(103, 198, 166);
 }
 section.section_form form div.contact_information {
   width: 35%;

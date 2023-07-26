@@ -45,6 +45,7 @@ const Contacto = () => {
       });
   };
   return (
+    <div className='background'>
     <section className='section_form'>
       <h1 className='titulo_contacto'>Contacto</h1>
       <form ref={form} onSubmit={sendEmail} className='contact_form'>
@@ -72,6 +73,7 @@ const Contacto = () => {
         </div>
       </form>
     </section>
+    </div>
   );
 };
 
