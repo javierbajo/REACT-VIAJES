@@ -18,6 +18,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            @media(max-width:376px){
+                width: 27%;
+            }
 
             & > a {
                 text-decoration: none;

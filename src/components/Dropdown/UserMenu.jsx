@@ -26,7 +26,7 @@ const UserMenu = ({user}) => {
                 <li><FaRegCreditCard/>Payments</li>
             </Link>
             <Link to="#">
-                <li><span className="fa-solid fa-box-archive"></span>Archive</li>
+                
             </Link>
         </ul>
     </div>

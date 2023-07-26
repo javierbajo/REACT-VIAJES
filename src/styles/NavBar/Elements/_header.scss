@@ -11,6 +11,10 @@
     translate: -50% 0;
     top: 0;
     border-bottom: 0.5px solid black;
+    @media(max-width:376px){
+        width: 67%;
+        left: 36%;
+    }
 
     & > div.logo_container {
         width: 15%;

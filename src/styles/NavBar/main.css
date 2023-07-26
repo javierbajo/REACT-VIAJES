@@ -147,6 +147,12 @@ table {
   top: 0;
   border-bottom: 0.5px solid black;
 }
+@media (max-width: 376px) {
+  .div_header {
+    width: 67%;
+    left: 36%;
+  }
+}
 .div_header > div.logo_container {
   width: 15%;
   height: 100%;
@@ -178,6 +184,11 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 376px) {
+  .header_nav > .nav_menu > li {
+    width: 27%;
+  }
 }
 .header_nav > .nav_menu > li > a {
   text-decoration: none;

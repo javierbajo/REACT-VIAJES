@@ -36,6 +36,10 @@ $gradient-2: #a890fe;
             & p {
                 font-size: 1.4em;
                 align-self: center;
+
+                @media(max-width: 376px) {
+                    display: none;
+                }
             }
 
             & .user_circle {
@@ -87,6 +91,14 @@ $gradient-2: #a890fe;
         visibility: visible;
         opacity: 1;
         scale: 1;
+
+        @media(max-width:376px) {
+            visibility: visible;
+            opacity: 1;
+            scale: 1;
+            margin-left: -63px;
+            width: 341%;
+        }
     }
 }
 
@@ -129,4 +141,3 @@ $gradient-2: #a890fe;
         }
     }
 }
-

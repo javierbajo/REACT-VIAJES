@@ -164,6 +164,11 @@ table {
   font-size: 1.4em;
   align-self: center;
 }
+@media (max-width: 376px) {
+  .dropdown > button.dropdown_button > div.content p {
+    display: none;
+  }
+}
 .dropdown > button.dropdown_button > div.content .user_circle {
   width: 60px;
   height: 40px;
@@ -202,6 +207,15 @@ table {
   visibility: visible;
   opacity: 1;
   scale: 1;
+}
+@media (max-width: 376px) {
+  .dropdown:hover .menu {
+    visibility: visible;
+    opacity: 1;
+    scale: 1;
+    margin-left: -63px;
+    width: 341%;
+  }
 }
 
 .menu {
