@@ -9,6 +9,7 @@ const ResumenCompra = () => {
     const {user, userCero} = useContext(userContext);
     const [destinos, setDestinos] = useState([]);
     const [actividades, setActividades] = useState([]);
+    let totalPagar = 0;
 //----------------------------------------------------------------------------------------------------------
 const getDataAPI_destinations = async (idDestino) => {
   const response = await fetch(`https://api-node-viajes.vercel.app/destinations/id/${idDestino}`);
@@ -54,10 +55,20 @@ useEffect(() => {
 }, []);
 //----------------------------------------------------------------------------------------------------------
 const destinosComprados = destinos.slice(0,numeroDestinosComprados);
-const destinosCesta = destinos.slice(numeroDestinosCesta, numeroDestinosComprados);
+const destinosCesta = destinos.slice(numeroDestinosComprados, numeroDestinosTotal);
 
-const actividadesCompradas = destinos.slice(0,numeroActividadesCompradas);
-const actividadesCesta = destinos.slice(numeroActividadesCesta, numeroActividadesCompradas);
+const actividadesCompradas = actividades.slice(0,numeroActividadesCompradas);
+const actividadesCesta = actividades.slice(numeroActividadesCompradas, numeroActividadesTotal);
+
+const calcularPrecio = ()=>{
+  for (let dest of destinosCesta){
+    totalPagar += dest.destinationPrice;
+  }
+  for (let activ of actividadesCesta){
+    totalPagar += activ.activityPrice;
+  }
+}
+calcularPrecio();
 //----------------------------------------------------------------------------------------------------------
   const renderDestinosComprados = () => {
     return destinosComprados.map( (dest, i) => (
@@ -108,23 +119,24 @@ const renderActividadesCesta = () => {
 
   return (
     <>
-    {/* <div>ResumenCompra</div> */}
     <div>
-
-
         <div>Destinos comprados anteriormente:{numeroDestinosComprados}</div>
-        <div>Destinos en la cesta:{numeroDestinosTotal-numeroDestinosComprados}</div>
+        <div>Destinos en la cesta:{numeroDestinosCesta}</div>
         <div>Actividades compradas anteriormente:{numeroActividadesCompradas}</div>
-        <div>Actividades en la cesta:{numeroActividadesTotal-numeroActividadesCompradas}</div>
+        <div>Actividades en la cesta:{numeroActividadesCesta}</div>
+        <div>:</div>
     </div>
     <h3>DESTINOS ANTERIORMENTE COMPRADOS:</h3>
     <section>{renderDestinosComprados()}</section>
+    <section>:</section>
     <h3>ACTIVIDADES ANTERIORMENTE COMPRADAS:</h3>
     <section>{renderActividadesCompradas()}</section>
     <h3>DESTINOS EN LA CESTA:</h3>
     <section>{renderDestinosCesta()}</section>
     <h3>ACTIVIDADES EN LA CESTA:</h3>
     <section>{renderActividadesCesta()}</section>
+    <section>:</section>
+    <section>TOTAL A PAGAR: {totalPagar}</section>
     </>
   ) 
 }
