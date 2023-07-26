@@ -227,7 +227,7 @@ aside.login > p {
   white-space: nowrap;
 }
 
-.input-box > :is(.name:focus, .has_value) ~ .div-label {
+.input-box > :is(.name:focus, .has-value) ~ .div-label {
   translate: 10% -41px;
   background: inherit;
   color: rgba(255, 255, 255, 0.85);

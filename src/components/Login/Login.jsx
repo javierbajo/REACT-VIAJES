@@ -17,7 +17,7 @@ const Login = ({ loginUser, loginError }) => {
 
   const handleChange = event => {
     const input = document.querySelectorAll(".name")
-    Array.from(input).map((element) => element.classList.toggle("has_value", event.target.value))
+    Array.from(input).map((element) => element.classList.toggle("has-value", event.target.value))
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   }
