@@ -7,6 +7,7 @@ import { useContext } from 'react';
 const Profile = () => {
 
   const {user, setUser} = useContext(userContext);
+  
   const sessionToken = JSON.parse(sessionStorage.getItem('token'));
 
     console.log(user);
@@ -33,12 +34,12 @@ const Profile = () => {
       });
       const res = await response.json();
       console.log(res);
-      
+      //alert('Datos actualizados')
     };
 
 
     const changeInput = (event) => {
-    
+      
       const { value, name } = event.target;
       setUser({ ...user, [name]: value });
       //console.log(formData);
@@ -46,10 +47,8 @@ const Profile = () => {
 
     const submitForm = (event) => {
       event.preventDefault();
-  
-      
       updateDataUsersAPI(user);
-      alert("Datos actualizados");
+      
       
     };
 
@@ -126,10 +125,10 @@ const Profile = () => {
               className="register-input-password"
               type="password"
               name="password"
-              placeholder="password"
+              placeholder="Introduce tu contraseña para actualizar datos"
               id="password"
               onChange={changeInput}
-              value=''
+              value={formPassword}
             /> */}
 
             {/* <Link to="/changepsw" className="change-psw">Actualizar contraseña</Link> */}
