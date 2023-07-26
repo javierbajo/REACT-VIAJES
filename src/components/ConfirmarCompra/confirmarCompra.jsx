@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import userContext from '../Context/userContext';
 import { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import ResumenCompra from './ResumenCompra';
 
 
@@ -13,8 +13,9 @@ const ConfirmarCompra = () => {
   const [formPassword, setFormPassword] = useState("");
 
   const {user, userCero, setUserCero} = useContext(userContext);
+
+
   const sessionToken = JSON.parse(sessionStorage.getItem('token'));
-  
   
   console.log(user);
     
