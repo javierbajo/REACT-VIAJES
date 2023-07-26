@@ -65,7 +65,6 @@ const Login = ({ loginUser, loginError }) => {
         </div>
         <div className='register_login'>
           <Link to="/register" className="login_registro">¿No tienes cuenta? Regístrate</Link>
-          {loginError ? <div className="loginError">{loginError} </div> : null}
           <hr />
           <Link to="/" className="back_home">Volver a home</Link>
         </div>

@@ -36,7 +36,7 @@ function App() {
   const [userCero, setUserCero] = useState(null);
 
 
-  const [loginError] = useState("");
+  const [loginError, setLoginError] = useState("");
 //--------------------------------------JAVI------------------------------------
 let allDestinations = [];
 
@@ -68,7 +68,8 @@ useEffect(() => {
       navigate("/")
       })
 .catch((error)=>{
-  alert(error.response.data.message)
+  //alert(error.response.data.message)
+  setLoginError(error.response.data.message)
 })
 };
   

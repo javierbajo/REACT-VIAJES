@@ -1,4 +1,5 @@
 .actividad-imageContainer {
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,4 +26,23 @@
   font-size: 26px;
   margin-top: 1em;
   color: #ff0000;
+}
+
+.BtnLoQuiero-btn, .BtnLoQuiero-btn-02 {
+  width: 15%;
+  color: #fff;
+  font-size: 1em;
+  margin-top: 5%;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(220.55deg, #3793FF 0%, #0017E4 100%);
+}
+.BtnLoQuiero-btn:hover, .BtnLoQuiero-btn-02:hover {
+  cursor: pointer;
+  background: linear-gradient(220.55deg, #0017E4 0%, #3793FF 100%);
+}
+
+.BtnLoQuiero-btn-02 {
+  margin-left: 5%;
 }/*# sourceMappingURL=DetalleActividades.css.map */

@@ -38,13 +38,12 @@ const Carrousel = () => {
     }, []);
 
     const options = {
-        type: "slide",
+        type: "loop",
         perPage: 1,
         autoplay: "play",
         interval: 3000,
         pauseOnHover: false,
         rewind: true,
-        rewindByDrag: true,
         rewindSpeed: 1500,
         arrows: false,
         intersection: {

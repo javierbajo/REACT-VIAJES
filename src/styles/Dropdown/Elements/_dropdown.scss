@@ -122,6 +122,13 @@ $gradient-2: #a890fe;
         &>li {
             display: flex;
             gap: 10px;
+
+            & a {
+                text-decoration: none;
+                color: #fff;
+                display: flex;
+                gap: 10px;
+            }
         }
 
         &:hover {
