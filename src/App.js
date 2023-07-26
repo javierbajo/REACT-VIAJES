@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import userContext from "./components/Context/userContext";
 import Home from "./components/Home/Home";
@@ -14,7 +14,6 @@ import Registro from "./components/Registro/Registro";
 import AuthRoute from "./components/AuthRoute/AuthRoute";
 import Profile from "./components/Profile/Profile";
 import Logout from "./components/Logout";
-import LoginNote from "./components/LoginNote";
 import Carrousel from "./components/Carrousel/Carrousel";
 import UserMenu from './components/Dropdown/UserMenu';
 import Actividades from "./components/Actividades/Actividades";
@@ -60,7 +59,7 @@ function App() {
 
     const loginUser = (formData, prevRoute)=>{
     //Este find es para cuando hacemos consultas a userList
-    try {
+  
        API.post('/users/login', formData)
       .then((res)=>{
       console.log(res.data);
@@ -69,14 +68,22 @@ function App() {
       //Ahora variamos la variable de estado userCero para que valga lo mismo que user
 
       sessionStorage.setItem('token', JSON.stringify(res.data));//Guardamos todo: token y UserInfo
-      // navigate(prevRoute || "/")
+      navigate(prevRoute || "/")
       // navigate("/")
-      });
-    } catch (error) {
-      setLoginError(error)
-      console.log(loginError)
-      
-    }
+      })
+.catch((error)=>{
+  console.log(error.response.data.message)
+})
+
+  //     .catch (error) {
+  //     return (
+  //       Promise.reject(error)
+  //       // setLoginError(error),
+  //       // alert(loginError)
+  //     ) 
+  //     //return res.status(400).json({ message: "Datos incorrectos" });
+ 
+   
   };
   
   
