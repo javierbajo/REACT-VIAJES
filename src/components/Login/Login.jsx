@@ -1,84 +1,82 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import '../../styles/Login.css'
+import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const intialState = {
-    email:"",
-    password:""
-}
-
+import '../../styles/Login/main.css';
+import { FaArrowLeft } from "react-icons/fa"
+import { FaArrowRight } from 'react-icons/fa';
 const Login = ({ loginUser, loginError }) => {
+  const initial_state = {
+    email: "",
+    password: ""
+  }
+  const navigate = useNavigate()
 
-  const navigate = useNavigate();
-  const [formData, setFormData] = useState(intialState);
+  const [formData, setFormData] = useState(initial_state)
 
-  const changeInput = (event) => {
-    //OTRA FORMA DE PONER LO MISMO
-    /* const nombreInput = event.target.name; 
-        const valorInput = event.target.value;
-        setFormData({...formdata, [nombreInput]: valorInput});*/
-    const { value, name } = event.target;
+  const handleChange = event => {
+    const input = document.querySelectorAll(".name")
+    Array.from(input).map((element) => element.classList.toggle("has_value", event.target.value))
+    const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
-    //console.log(name, value)
-  };
+  }
 
-  const submitForm = (event) => {
+  const submitHandler = (event) => {
     event.preventDefault();
-    console.log("Se han enviado los datos");
-    loginUser(formData);
-    setFormData(intialState);
-    // navigate("/infoDatosPersonales");
-  };
-  //console.log(formData)
+    console.log("Se han enviado los datos")
+    loginUser(formData)
+    setFormData(initial_state)
 
+
+  }
+
+  const nextHandler = (event) => {
+    const aside = document.querySelector(".login-email");
+    aside.classList.remove("visible")
+  }
+
+  const backHandler = event => {
+    const aside = document.querySelector(".login-email");
+    aside.classList.add("visible")
+  }
   return (
-    <div className="login-contenedor">
-      <div className="login-contenedor-centrado">
-        <div className="login-div-izquierdo">
-          <form className="login-form" onSubmit={submitForm}>
-            <label htmlFor="email">Email</label>
-            <input
-              className="login-input-email"
-              type="email"
-              name="email"
-              placeholder="email"
-              id="email"
-              onChange={changeInput}
-              value={formData.email}
-            />
+    <form onSubmit={submitHandler}>
+      <aside className="login login-password">
+        <button type="button" onClick={backHandler} className="back"><FaArrowLeft /></button>
+        <h2 className="password-title">Login</h2>
+        <p className="welcome-message">Welcome back!</p>
 
-            <label htmlFor="password">Contraseña</label>
-            <input
-              className="login-input-password"
-              type="password"
-              name="password"
-              placeholder="password"
-              id="password"
-              onChange={changeInput}
-              value={formData.password}
-            />
-
-            <button type="submit" className="login-button">
-              Login
-            </button>
-          </form>
+        <div className="input-box">
+          <input type="password" name="password" className="name" autoComplete="off" onInput={handleChange} value={formData.password} />
+          <label htmlFor='password' className="div-label">Password</label>
         </div>
 
-        <div className="login-div-derecho">
-          <div className="login-div-titulo">Bienvenido</div>
+        <div className='error'>{loginError}</div>
+        <button type="submit" className="button login-button">Login</button>
+
+      </aside>
+
+      <aside className="login login-email visible">
+        <h2 className="password-title">Login</h2>
+        <p className="welcome-message">Welcome back!</p>
+
+        <div className="input-box">
+          <input type="email" name="email" className="name" autoComplete="off" onInput={handleChange} value={formData.email} />
+          <label htmlFor='email' className="div-label">Email</label>
+        </div>
+        <div className='register_login'>
+          <Link to="/register" className="login_registro">¿No tienes cuenta? Regístrate</Link>
+          {loginError ? <div className="loginError">{loginError} </div> : null}
           <hr />
-          <div >
-            <Link to="/register" className="login-registro">¿No tienes cuenta? Regístrate</Link>
-            {loginError ? <div className="loginError">{loginError} </div> : null}
-            <hr />
-            <Link to="/" className="login-registro">Volver a home</Link>
-          </div>
+          <Link to="/" className="back_home">Volver a home</Link>
         </div>
-      </div>
-      
-    </div>
-  );
-};
+        <button type="button" onClick={nextHandler} className="button next-button">Next <FaArrowRight /></button>
+
+      </aside>
+      <div className="background_login"></div>
+    </form>
+  )
+
+}
 
 export default Login;

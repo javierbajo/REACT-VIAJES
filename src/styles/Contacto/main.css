@@ -251,13 +251,13 @@ section.section_form form div.contact_information span svg {
   opacity: 0;
 }
 
-input:focus + label {
+.input:focus + label {
   color: #000000;
   transform: scale(1.1);
   opacity: 0;
 }
 
-textarea:focus + label {
+.message_area:focus + label {
   color: #000000;
   transform: scale(1.1);
   opacity: 0;
