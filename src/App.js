@@ -64,8 +64,8 @@ useEffect(() => {
       //Ahora variamos la variable de estado userCero para que valga lo mismo que user
 
       sessionStorage.setItem('token', JSON.stringify(res.data));//Guardamos todo: token y UserInfo
-      //navigate(prevRoute || "/")
-      navigate("/")
+      navigate(prevRoute || "/")
+      //navigate("/")
       })
 .catch((error)=>{
   alert(error.response.data.message)

@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import '../../styles/Login/main.css';
 import { FaArrowLeft } from "react-icons/fa"
 import { FaArrowRight } from 'react-icons/fa';
+
+
 const Login = ({ loginUser, loginError }) => {
   const initial_state = {
     email: "",

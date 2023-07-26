@@ -32,9 +32,34 @@ const BtnLoQuiero = ({ tipoProducto, idProducto }) => {
     const goToCesta = () => {
         navigate("/confirmarCompra");
     }
-    // const info = () => {
-    //     navigate("/infoDatosPersonales");
-    // }
+
+    const sessionToken = JSON.parse(sessionStorage.getItem('token'));
+
+    
+    const deleteProduct = async () =>{
+      console.log(sessionToken);
+      console.log(user);
+      const response = await fetch(`https://api-node-viajes.vercel.app/${tipoProducto}/${idProducto}`, {
+        method: "DELETE",
+        headers: {
+          Accept: 'application/json',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        Authorization: {
+          toString() {
+          return `Bearer ${sessionToken.token || null}`;
+    },
+  },
+        },
+        body: JSON.stringify(
+          user
+        ),
+      });
+      const res = await response.json();
+      console.log(res);
+      //alert('Datos actualizados')
+    };
+
 
     return (
         <>
@@ -52,8 +77,9 @@ const BtnLoQuiero = ({ tipoProducto, idProducto }) => {
                     <button className="BtnLoQuiero-btn" onClick={goToLogin}
                     >Si lo quieres, logéate!</button>
                 }
-                 {/* <button className="BtnLoQuiero-btn" onClick={info}
-                        >ir a info</button> */}
+                {user ? (user.role === "admin" ? <button className="BtnLoQuiero-btn" onClick={deleteProduct}
+                    >Borrar</button> : null) : null}
+
             </div>
 
 
