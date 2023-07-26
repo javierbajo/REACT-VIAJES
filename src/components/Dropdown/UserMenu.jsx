@@ -23,14 +23,7 @@ const UserMenu = ({user}) => {
             </Link>
 
             <Link to="#">
-<<<<<<< HEAD
-                <li><FaRegCreditCard/>Payments</li>
-            </Link>
-            <Link to="#">
-                
-=======
                 {user ? <li><Link to="/confirmarCompra"><FaShoppingCart/>Cart</Link></li> : <li><Link to="/login"><FaShoppingCart/>Cart</Link></li>}
->>>>>>> CambioLinksDropdown
             </Link>
         </ul>
     </div>
