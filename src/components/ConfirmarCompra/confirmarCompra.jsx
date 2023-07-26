@@ -83,7 +83,7 @@ const ConfirmarCompra = () => {
           </div>
           <div className="register-div-derecho">
             <hr />
-            <div className="login-div-titulo">Confirmar compra de la cesta</div>
+            {/* <div className="login-div-titulo">Confirmar compra de la cesta</div> */}
             <ResumenCompra/>
               <hr />
           </div>
