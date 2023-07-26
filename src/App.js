@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import userContext from "./components/Context/userContext";
 import Home from "./components/Home/Home";
 import Destinos from "./components/Destinos/Destinos";
@@ -22,40 +22,20 @@ import DetalleActividad from "./components/Actividades/DetalleActividad";
 import ChangePassword from "./components/ChangePassword/changePassword";
 import AñadidoCesta from "./components/Profile/AñadidoCesta";
 import ConfirmarCompra from "./components/ConfirmarCompra/confirmarCompra";
-import ResumenCompra from "./components/ConfirmarCompra/ResumenCompra";
 import InfoDatosPersonales from "./components/Profile/InfoDatosPersonales";
 import Admin from './components/Admin/Admin';
 import AdminPost from "./components/Admin/Post/AdminPost";
 import AdminUsers from  "./components/Admin/AdminUsers/AdminUsers"
 
 
-
-
-
-
-
 function App() {
-  const navigate = useNavigate();
-  // traigo los datos de los usuarios de la DB--------------
-  // const [userList, setUserList] = useState([]);
+  
 
-  // const getDataUsersAPI = async () => {
-  //   const response = await fetch("https://api-frutas.vercel.app/users");
-  //   const res = await response.json();
-  //   setUserList(res);
-
-  // };
-  // useEffect(() => {
-  //   getDataUsersAPI();
-  // }, []);
-  //console.log(userList);
-  //-----------------------------------
-  // primer estado del user es null, aún no está definido
   const [user, setUser] = useState(null);
   const [userCero, setUserCero] = useState(null);
 
 
-  const [loginError, setLoginError] = useState("");
+  const [loginError] = useState("");
 
     const loginUser = (formData, prevRoute)=>{
     //Este find es para cuando hacemos consultas a userList
@@ -68,23 +48,13 @@ function App() {
       //Ahora variamos la variable de estado userCero para que valga lo mismo que user
 
       sessionStorage.setItem('token', JSON.stringify(res.data));//Guardamos todo: token y UserInfo
-      navigate(prevRoute || "/")
+      //navigate(prevRoute || "/")
       // navigate("/")
       })
 .catch((error)=>{
   console.log(error.response.data.message)
 })
-
-  //     .catch (error) {
-  //     return (
-  //       Promise.reject(error)
-  //       // setLoginError(error),
-  //       // alert(loginError)
-  //     ) 
-  //     //return res.status(400).json({ message: "Datos incorrectos" });
- 
-   
-  };
+};
   
   
   return (
@@ -99,12 +69,6 @@ function App() {
           <NavBar  />
           <UserMenu user={user}/>
         </header>
-        
-
-        {/* <Routes>
-          <Route path="/profile" element="" />
-          <Route path="*" element={<LoginNote user={user} />} />
-        </Routes> */}
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -120,30 +84,40 @@ function App() {
 
           <Route path="/actividades" element={<Actividades />} />
           <Route path="/actividades/:idActividad" element={<DetalleActividad/>} />
-          <Route path="/añadidoCesta" element={<AñadidoCesta/>} />
-          <Route path="/confirmarCompra" element={<ConfirmarCompra/>} />
-
-
 
           <Route path="/register" element={<Registro />} />
           <Route path="/contacto" element={<Contacto />} />
-          <Route path="/changepsw" element={<ChangePassword />} />
-          <Route path="/infoDatosPersonales" element={<InfoDatosPersonales />} />
-          
 
-          <Route
-            path="/profile"
-            element={
+          <Route path="/añadidoCesta" element={
+            <AuthRoute user={user} component={<AñadidoCesta user={user} />} />
+          } />
+          <Route path="/confirmarCompra" element={
+            <AuthRoute user={user} component={<ConfirmarCompra user={user} />} />
+          } />
+          <Route path="/changepsw" element={
+            <AuthRoute user={user} component={<ChangePassword user={user} />} />
+          } />
+          <Route path="/infoDatosPersonales" element={
+            <AuthRoute user={user} component={<InfoDatosPersonales user={user} />} />
+          } />
+
+          <Route path="/profile" element={
               <AuthRoute user={user} component={<Profile user={user} />} />
             }
           />
-           <Route path="/admin" element={<Admin />} />
+          <Route path="/admin" element={
+            <AuthRoute user={user} component={<Admin user={user} />} />
+          } />
+          <Route path="/admin/Home" element={
+            <AuthRoute user={user} component={<Admin user={user} />} />
+          } />
+          <Route path="/admin/usuarios" element={
+            <AuthRoute user={user} component={<AdminUsers user={user} />} />
+          } />
+          <Route path="/admin/post" element={
+            <AuthRoute user={user} component={<AdminPost user={user} />} />
+          } />
 
-
-<Route path="/admin/Home" element={<Admin/>} />
-<Route path="/admin/usuarios" element={<AdminUsers />} />
-<Route path="/admin/post" element={<AdminPost />} />
-          {/*<Route path="/infouser" element={<UserInfo/>} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
         </userContext.Provider>
