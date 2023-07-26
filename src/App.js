@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import userContext from "./components/Context/userContext";
 import Home from "./components/Home/Home";
@@ -26,16 +26,32 @@ import InfoDatosPersonales from "./components/Profile/InfoDatosPersonales";
 import Admin from './components/Admin/Admin';
 import AdminPost from "./components/Admin/Post/AdminPost";
 import AdminUsers from  "./components/Admin/AdminUsers/AdminUsers"
+import { useNavigate } from "react-router-dom";
 
 
 function App() {
   
-
+  const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [userCero, setUserCero] = useState(null);
 
 
   const [loginError] = useState("");
+//--------------------------------------JAVI------------------------------------
+let allDestinations = [];
+
+const getDestinosAPI = async ()=>{
+  const response = await fetch('https://api-node-viajes.vercel.app/destinations');
+  const res = await response.json();
+  allDestinations = res;
+}
+
+useEffect(() => {
+  getDestinosAPI();
+},[]);
+
+//--------------------------------------JAVI------------------------------------
+
 
     const loginUser = (formData, prevRoute)=>{
     //Este find es para cuando hacemos consultas a userList
@@ -49,10 +65,10 @@ function App() {
 
       sessionStorage.setItem('token', JSON.stringify(res.data));//Guardamos todo: token y UserInfo
       //navigate(prevRoute || "/")
-      // navigate("/")
+      navigate("/")
       })
 .catch((error)=>{
-  console.log(error.response.data.message)
+  alert(error.response.data.message)
 })
 };
   
@@ -61,7 +77,7 @@ function App() {
     <>
       <div className="App">
 
-      <userContext.Provider value={{user, setUser, userCero, setUserCero}}>
+      <userContext.Provider value={{user, setUser, userCero, setUserCero, allDestinations}}>
         <header className="div_header">
           <div className="logo_container">
             <img src="https://img.freepik.com/vector-gratis/vector-degradado-logotipo-colorido-pajaro_343694-1365.jpg" alt="not working" />

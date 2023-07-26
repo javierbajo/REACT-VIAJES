@@ -11,17 +11,7 @@ const Destinos = () => {
       setDestinations(res);
   }
   useEffect(() => {
-
     getDataAPI();
-/*
-    fetch('http://localhost:3001/fruits')
-    .then((response) => response.json())
-    .then((data) => {
-      setFruits(data);
-      console.log(data);
-    })
-    .catch(error => {console.log(error)});
-*/
   },[]);
 
   return (

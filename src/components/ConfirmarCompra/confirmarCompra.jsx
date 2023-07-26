@@ -39,17 +39,16 @@ const ConfirmarCompra = () => {
 //----------
     const res = await response.json();
     console.log(res);
+  };
 //--------------------------------------------------------------------------
-  };
-
-  const changeInput = (event) => {
-    setFormPassword(event.target.value);
-  };
+  // const changeInput = (event) => {
+  //   setFormPassword(event.target.value);
+  // };
 //--------------------------------------------------------------------------
 
   const submitForm = (event) => {
     event.preventDefault();
-    user.password = formPassword;
+    // user.password = formPassword;
     updateDataUsersAPI(user);
     setUserCero(user);
     alert("Compra realizada");
@@ -65,7 +64,7 @@ const ConfirmarCompra = () => {
           <div className="register-div-izquierdo">
             <form onSubmit={submitForm} className="login-form" >
             
-          <label htmlFor="password">Contraseña</label> 
+          {/* <label htmlFor="password">Contraseña</label> 
              <input
               className="register-input-password"
               type="password"
@@ -74,7 +73,9 @@ const ConfirmarCompra = () => {
               id="password"
               onChange={changeInput}
               value={formPassword}
-            />
+            /> */}
+
+
               <button type="submit" className="register-button">
                 Confirmar compra
               </button>
