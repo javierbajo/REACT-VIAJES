@@ -75,7 +75,7 @@ calcularPrecio();
         <li key={i}>
           <div>
             <p>{dest.destinationPlace}</p>
-            <p>Precio: {dest.destinationPrice}€</p>
+            <p>{dest.destinationDate}€</p>
           </div>
         </li>
     ));
@@ -86,7 +86,8 @@ const renderDestinosCesta = () => {
       <li key={i}>
         <div>
           <p>{dest.destinationPlace}</p>
-          <p>Precio: {dest.destinationPrice}€</p>
+          <p>{dest.destinationDate}</p>
+          <p style={{ fontWeight: 'bold', fontSize:'22px', color:'white' }}>Precio: {dest.destinationPrice}€</p>
         </div>
       </li>
   ));
@@ -98,7 +99,7 @@ const renderActividadesCompradas = () => {
         <div>
           <p>{activ.activityName}</p>
           <p>{activ.activityPlace}</p>
-          <p>Precio: {activ.activityPrice}€</p>
+          <p>{activ.activityDate}€</p>
         </div>
       </li>
   ));
@@ -110,7 +111,7 @@ const renderActividadesCesta = () => {
         <div>
           <p>{activ.activityName}</p>
           <p>{activ.activityPlace}</p>
-          <p>Precio: {activ.activityPrice}€</p>
+          <p style={{ fontWeight: 'bold', fontSize:'22px', color:'white' }}>Precio: {activ.activityPrice}€</p>
         </div>
       </li>
   ));
@@ -126,17 +127,35 @@ const renderActividadesCesta = () => {
         <div>Actividades en la cesta:{numeroActividadesCesta}</div>
         <div>:</div>
     </div>
-    <h3>DESTINOS ANTERIORMENTE COMPRADOS:</h3>
-    <section>{renderDestinosComprados()}</section>
+    { numeroDestinosComprados == 0 ? null:
+      <>
+      <h3>DESTINOS ANTERIORMENTE COMPRADOS:</h3>
+      <section>{renderDestinosComprados()}</section>
+      </>
+    }
     <section>:</section>
+    { numeroActividadesCompradas == 0 ? null:
+    <>
     <h3>ACTIVIDADES ANTERIORMENTE COMPRADAS:</h3>
     <section>{renderActividadesCompradas()}</section>
-    <h3>DESTINOS EN LA CESTA:</h3>
-    <section>{renderDestinosCesta()}</section>
-    <h3>ACTIVIDADES EN LA CESTA:</h3>
-    <section>{renderActividadesCesta()}</section>
+    </>
+    }
+    { numeroDestinosCesta == 0 ? null:
+      <>
+      <h3>DESTINOS EN LA CESTA:</h3>
+      <section>{renderDestinosCesta()}</section>
+      </>
+    }
+    { numeroActividadesCesta == 0 ? null:
+      <>
+      <h3>ACTIVIDADES EN LA CESTA:</h3>
+      <section>{renderActividadesCesta()}</section>
+      </>
+    }
     <section>:</section>
-    <section>TOTAL A PAGAR: {totalPagar}</section>
+    { totalPagar == 0 ? null:
+    <section style={{ fontWeight: 'bold', fontSize:'25px', backgroundColor:'red' }}>TOTAL A PAGAR: {totalPagar}</section>
+    }
     </>
   ) 
 }
