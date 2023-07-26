@@ -34,23 +34,24 @@ function App() {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [userCero, setUserCero] = useState(null);
+  const [allDestinations, setAllDestinations] = useState(null);
 
 
   const [loginError] = useState("");
 //--------------------------------------JAVI------------------------------------
-let allDestinations = [];
+// let allDestinations = [];
 
 const getDestinosAPI = async ()=>{
   const response = await fetch('https://api-node-viajes.vercel.app/destinations');
   const res = await response.json();
-  allDestinations = res;
+  setAllDestinations(res);
 }
 
 useEffect(() => {
   getDestinosAPI();
 },[]);
 
-//--------------------------------------JAVI------------------------------------
+//--------------------------------------/JAVI------------------------------------
 
 
     const loginUser = (formData, prevRoute)=>{
