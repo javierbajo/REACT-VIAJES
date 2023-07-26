@@ -10,7 +10,7 @@ const UserMenu = ({user}) => {
         <button type="button" className="dropdown_button">
             <div className="content">
                 <FaUserCircle className='user_circle'/>
-                <p>{user != null ? user : "Account"}</p>
+                <p>{user != null ? user.username : "Account"}</p>
                 <FaAngleDown className='arrow_down'/>
             </div>
         </button>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import '../../styles/Login/main.css';
@@ -10,7 +10,8 @@ const Login = ({ loginUser, loginError }) => {
     email: "",
     password: ""
   }
-  const navigate = useNavigate()
+  const location = useLocation()
+  const {state} = location
 
   const [formData, setFormData] = useState(initial_state)
 
@@ -24,10 +25,8 @@ const Login = ({ loginUser, loginError }) => {
   const submitHandler = (event) => {
     event.preventDefault();
     console.log("Se han enviado los datos")
-    loginUser(formData)
+    loginUser(formData, state ? state.prevRoute : null)
     setFormData(initial_state)
-
-
   }
 
   const nextHandler = (event) => {
