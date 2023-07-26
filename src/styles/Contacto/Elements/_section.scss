@@ -1,3 +1,5 @@
+@import"../Elements/var";
+
 div.background {
     background-image: url("https://humanidades.com/wp-content/uploads/2017/03/ciudad-3-e1565900111723.jpg");
     background-repeat: no-repeat;
@@ -12,12 +14,13 @@ section.section_form {
     margin-bottom: 8%;
     position: relative;
     top: 50%;
-    left: 50%;
+    margin-left: 50%;
     translate: -50% 0;
     border: 2px solid black;
     box-shadow: 13px 18px 10px 0px rgba(0,0,0,0.1);
     border-radius: 10px;
     background-color: #fff;
+    @include mobile(23%,24%,44%,68%,0px);
 
     & h1 {
         width: 100%;
@@ -25,6 +28,9 @@ section.section_form {
         text-align: center;
         font-size: 1.9em;
         color: rgb(116, 195, 169);
+        @media(max-width:375px){
+
+        }
     }
 
     & form {
