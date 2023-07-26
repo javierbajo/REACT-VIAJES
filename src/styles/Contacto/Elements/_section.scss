@@ -1,0 +1,156 @@
+div.background {
+    background-image: url("https://humanidades.com/wp-content/uploads/2017/03/ciudad-3-e1565900111723.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+section.section_form {
+    width: 70%;
+    height: 85vh;
+    margin-top: 7%;
+    margin-bottom: 8%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    translate: -50% 0;
+    border: 2px solid black;
+    box-shadow: 13px 18px 10px 0px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    background-color: #fff;
+
+    & h1 {
+        width: 100%;
+        margin-top: 2%;
+        text-align: center;
+        font-size: 1.9em;
+        color: rgb(116, 195, 169);
+    }
+
+    & form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        & div.content {
+            width: 45%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5%;
+
+            & label {
+                align-self: baseline;
+                font-size: 1.3em;
+                margin-left: 5%;
+                margin-top: 5%;
+                position: absolute;
+                color: rgb(187, 176, 176);
+                transition: 0.5s;
+
+                &.label_name {
+                    top: 6%;
+                }
+
+                &.label_email {
+                    top: 21%;
+                }
+            }
+
+            & .input {
+                border: 1px solid black;
+                width: 90%;
+                padding: 5% 5%;
+                height: 5%;
+                margin-bottom: 10%;
+                transition: 0.3s;
+                font-size: 1.3em;
+
+                &:focus {
+                    border-top: 8px solid rgb(83, 248, 193);
+                }
+            }
+
+            & .message_area {
+                border: 1px solid black;
+                margin-top: 5%;
+                width: 85%;
+                padding: 5%;
+                height: 35%;
+                font-size: 1.1em;
+                transition: 0.3s;
+
+                &:focus {
+                    width: 90%;
+                    border: 3px solid black;
+                }
+            }
+
+            & .submit_button{
+                margin-top: 10%;
+                width: 70%;
+                height: 10%;
+                border-radius: 20px;
+                background-color:rgb(83, 248, 193) ;
+                transition: 0.3s;
+                &:hover {
+                    cursor: pointer;
+                background-color:rgb(103, 198, 166) ;
+                }
+            }
+        }
+
+        & div.contact_information {
+            width: 35%;
+            height: 35%;
+            margin-top: 10%;
+            margin-left: 5%;
+            display: flex;
+            flex-direction: column;
+            gap: 10%;
+
+            & span {
+                margin-left: 8%;
+                font-size: 1.2em;
+                display: flex;
+                gap: 5%;
+
+                & svg {
+                    color: rgb(83, 248, 193);
+                }
+            }
+        }
+    }
+}
+
+.has_value+label {
+    opacity: 0;
+}
+
+input:focus+label {
+    color: #000000;
+    transform: scale(1.1);
+    opacity: 0;
+}
+
+textarea:focus+label {
+    color: #000000;
+    transform: scale(1.1);
+    opacity: 0;
+}
+
+.redes_sociales {
+    width: 100%;
+    height: 30%;
+    margin-left: 15%;
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    & div {
+        width: 10%;
+    }
+}
+

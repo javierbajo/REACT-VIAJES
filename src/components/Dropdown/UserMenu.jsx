@@ -4,13 +4,13 @@ import { FaUserCircle } from "react-icons/fa";
 import { FaCog } from "react-icons/fa";
 import {FaRegCreditCard} from "react-icons/fa";
 import {FaAngleDown} from "react-icons/fa";
-const UserMenu = () => {
+const UserMenu = ({user}) => {
     return (
         <div className="dropdown">
         <button type="button" className="dropdown_button">
             <div className="content">
                 <FaUserCircle className='user_circle'/>
-                <p>Account</p>
+                <p>{user != null ? user : "Account"}</p>
                 <FaAngleDown className='arrow_down'/>
             </div>
         </button>
