@@ -34,24 +34,11 @@ function App() {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [userCero, setUserCero] = useState(null);
-  const [allDestinations, setAllDestinations] = useState(null);
+
 
 
   const [loginError] = useState("");
-//--------------------------------------JAVI------------------------------------
-// let allDestinations = [];
 
-const getDestinosAPI = async ()=>{
-  const response = await fetch('https://api-node-viajes.vercel.app/destinations');
-  const res = await response.json();
-  setAllDestinations(res);
-}
-
-useEffect(() => {
-  getDestinosAPI();
-},[]);
-
-//--------------------------------------/JAVI------------------------------------
 
 
     const loginUser = (formData, prevRoute)=>{
@@ -78,7 +65,7 @@ useEffect(() => {
     <>
       <div className="App">
 
-      <userContext.Provider value={{user, setUser, userCero, setUserCero, allDestinations}}>
+      <userContext.Provider value={{user, setUser, userCero, setUserCero}}>
         <header className="div_header">
           <div className="logo_container">
             <img src="https://img.freepik.com/vector-gratis/vector-degradado-logotipo-colorido-pajaro_343694-1365.jpg" alt="not working" />
