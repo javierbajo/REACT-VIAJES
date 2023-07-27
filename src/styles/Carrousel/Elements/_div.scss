@@ -3,15 +3,17 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    font-size: 2.5em;
+    font-size: 1em;
     font-family: 'Anton', sans-serif;
     color: #fff;
-    left: 10%;
+    right: 90%;
     top:55%;
     gap: 20px;
-    & .destination_name{
-        
-    }
+
+     @include small{
+        left: 10%;
+        font-size: 2.5em;
+     }
 
     & .destination_hotel{
         align-self: center;

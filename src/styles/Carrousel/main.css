@@ -150,11 +150,17 @@ article.destination_card {
 }
 
 .destination_card img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   min-width: 100%;
-  min-height: 100px;
+  height: 100%;
   filter: brightness(50%);
+}
+@media only screen and (min-width: 760px) {
+  .destination_card img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 div.carrousel {
@@ -172,27 +178,23 @@ div.carrousel {
   gap: 20%;
 }
 
-div.encima {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  border: 3px solid black;
-}
-
 .destination_information {
   width: 30%;
   display: flex;
   flex-direction: column;
   position: absolute;
-  font-size: 2.5em;
+  font-size: 1em;
   font-family: "Anton", sans-serif;
   color: #fff;
-  left: 10%;
+  right: 90%;
   top: 55%;
   gap: 20px;
+}
+@media only screen and (min-width: 760px) {
+  .destination_information {
+    left: 10%;
+    font-size: 2.5em;
+  }
 }
 .destination_information .destination_hotel {
   align-self: center;

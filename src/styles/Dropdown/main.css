@@ -134,8 +134,8 @@ table {
 }
 
 .dropdown {
-  width: 15%;
-  height: 50%;
+  width: 10%;
+  height: 5%;
   padding-right: 1%;
   padding-left: 1%;
   position: relative;
@@ -143,6 +143,12 @@ table {
   border-radius: 10px;
   align-self: center;
   margin-right: 2%;
+}
+@media only screen and (min-width: 760px) {
+  .dropdown {
+    width: 15%;
+    height: 50%;
+  }
 }
 .dropdown > button.dropdown_button {
   background: inherit;
@@ -161,20 +167,29 @@ table {
   transition: 0.3s;
 }
 .dropdown > button.dropdown_button > div.content p {
-  font-size: 1.4em;
   align-self: center;
+  display: none;
 }
-@media (max-width: 376px) {
+@media only screen and (min-width: 760px) {
   .dropdown > button.dropdown_button > div.content p {
-    display: none;
+    display: block;
+    font-size: 1.4em;
   }
 }
 .dropdown > button.dropdown_button > div.content .user_circle {
-  width: 60px;
-  height: 40px;
+  width: 40px;
+  height: 20px;
   align-self: center;
 }
+@media only screen and (min-width: 760px) {
+  .dropdown > button.dropdown_button > div.content .user_circle {
+    width: 60px;
+    height: 40px;
+    align-self: center;
+  }
+}
 .dropdown > button.dropdown_button > div.content .arrow_down {
+  opacity: 0;
   width: 50%;
   height: 30%;
   align-self: center;
@@ -182,10 +197,14 @@ table {
   margin-left: 20%;
   transition: 0.3s;
 }
+@media only screen and (min-width: 760px) {
+  .dropdown > button.dropdown_button > div.content .arrow_down {
+    display: block;
+  }
+}
 .dropdown > button.dropdown_button > div.content::after {
   content: "";
   position: absolute;
-  background: rgba(255, 255, 255, 0.986);
   transform: scaleX(0);
   width: 120%;
   left: 0;
@@ -193,6 +212,11 @@ table {
   height: 2px;
   bottom: -40%;
   transition: 0.3s;
+}
+@media only screen and (min-width: 760px) {
+  .dropdown > button.dropdown_button > div.content::after {
+    background: rgba(255, 255, 255, 0.986);
+  }
 }
 .dropdown:hover > .dropdown_button > .content::after {
   transform: scaleX(1);
@@ -208,54 +232,68 @@ table {
   opacity: 1;
   scale: 1;
 }
-@media (max-width: 376px) {
-  .dropdown:hover .menu {
-    visibility: visible;
-    opacity: 1;
-    scale: 1;
-    margin-left: -63px;
-    width: 341%;
-  }
-}
 
 .menu {
   position: absolute;
   z-index: 1;
-  width: 110%;
-  border: 3px solid black;
+  width: 120%;
   top: -8px;
   left: 50%;
-  padding: 70px 0 6px;
+  padding: 20px 0 6px;
   border-radius: 6px;
   translate: -50%;
-  scale: 0.85;
   visibility: hidden;
   opacity: 0;
-  box-shadow: 1px 1px 3px rgb(0, 0, 0);
+  border: 1px solid black;
   background: linear-gradient(#ea8d8d, #a890fe);
   transition: 0.3s;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  font-size: 1.2em;
+  font-size: 0.5em;
   text-shadow: 1px 1px #000000;
+}
+@media only screen and (min-width: 760px) {
+  .menu {
+    width: 110%;
+    scale: 0.85;
+    font-size: 1.2em;
+    padding: 70px 0 6px;
+    gap: 10px;
+    top: -8px;
+    box-shadow: 1px 1px 3px rgb(0, 0, 0);
+    border: 3px solid black;
+  }
 }
 .menu > a {
   display: flex;
   align-items: center;
-  padding: 10% 24px;
   color: #f7f7f7;
   text-decoration: none;
+}
+@media only screen and (min-width: 760px) {
+  .menu > a {
+    padding: 10% 24px;
+  }
 }
 .menu > a > li {
   display: flex;
   gap: 10px;
+  margin-top: 50%;
+}
+@media only screen and (min-width: 760px) {
+  .menu > a > li {
+    margin: 0;
+  }
 }
 .menu > a > li a {
   text-decoration: none;
   color: #fff;
   display: flex;
-  gap: 10px;
+}
+@media only screen and (min-width: 760px) {
+  .menu > a > li a {
+    gap: 10px;
+  }
 }
 .menu > a:hover {
   background: rgba(0, 0, 0, 0.1);

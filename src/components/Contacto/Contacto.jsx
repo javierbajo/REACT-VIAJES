@@ -46,33 +46,37 @@ const Contacto = () => {
   };
   return (
     <div className='background'>
-    <section className='section_form'>
-      <h1 className='titulo_contacto'>Contacto</h1>
-      <form ref={form} onSubmit={sendEmail} className='contact_form'>
-        <div className='contact_information'>
-          <span className='contact_mail'><FaEnvelope /> contactmail@gmail.com</span>
-          <span className='contact_telf'><FaPhoneAlt /> 033-731</span>
-          <div className="redes_sociales">
-            <div className="instagram"></div>
-            <div className="twitter"></div>
-            <div className="facebook"></div>
+      <section className='section_form'>
+        <h1 className='titulo_contacto'>Contacto</h1>
+        <form ref={form} onSubmit={sendEmail} className='contact_form'>
+          <div className='contact_information'>
+            <span className='contact_mail'><FaEnvelope /> contactmail@gmail.com</span>
+            <span className='contact_telf'><FaPhoneAlt /> 033-731</span>
+            <div className="redes_sociales">
+              <div className="instagram"></div>
+              <div className="twitter"></div>
+              <div className="facebook"></div>
+            </div>
           </div>
-        </div>
-        <div className='content'>
+          <div className='content'>
+            <div className='content_box'>
+              <input onInput={handleNameInput} type="text" name="user_name" className={nameClass} />
+              <label htmlFor='user_name' className='label_name'>Name</label>
+            </div>
+            <div className='content_box'>
+              <input onInput={handleEmailInput} type="email" name="user_email" className={emailClass} />
+              <label htmlFor='user_email' className='label_email'>Email</label>
+            </div>
 
-          <input onInput={handleNameInput} type="text" name="user_name" className={nameClass} />
-          <label htmlFor='user_name' className='label_name'>Name</label>
+            <div className='message_box'>
 
-          <input onInput={handleEmailInput} type="email" name="user_email" className={emailClass} />
-          <label htmlFor='user_email' className='label_email'>Email</label>
-
-
-          <textarea onInput={handleTextInput} name="message" className={textClass} />
-          <label htmlFor='message' className='label_message'>Message</label>
-          <input type="submit" value="Send" className='submit_button' />
-        </div>
-      </form>
-    </section>
+              <textarea onInput={handleTextInput} name="message" className={textClass} />
+              <label htmlFor='message' className='label_message'>Message</label>
+            </div>
+            <input type="submit" value="Send" className='submit_button' />
+          </div>
+        </form>
+      </section>
     </div>
   );
 };
